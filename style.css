@@ -88,9 +88,15 @@ button {
   padding: 0 17px 0 24px;
 }
 
+.header {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
 .header_wrapper {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   padding-top: 20px;
@@ -103,9 +109,10 @@ button {
 
 .main-nav_toggle {
   display: flex;
+  align-items: center;
+  justify-content: center;
   width: 48px;
   height: 48px;
-  padding: 12px 10px;
   border-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.45);
   border-radius: 8px;
@@ -137,31 +144,31 @@ button {
 }
 
 .main-nav_toggle-item::before {
-  top: 10px;
+  top: -10px;
 }
 
 .main-nav_toggle-item::after {
-  top: 20px;
+  top: 10px;
 }
 
 .header_logo {
   display: flex;
-  width: 106px;
+  max-width: 106px;
   font-family: inherit;
-  font-size: 28px;
-  line-height: 24px;
+  font-size: 24px;
+  line-height: 28px;
   font-weight: 600;
   color: #ffffff;
   word-wrap: normal;
   word-break: break-all;
   letter-spacing: 0.2px;
   margin-left: 16px;
+  text-transform: uppercase;
 }
 
 .search_wrapper {
   display: flex;
   flex-grow: 1;
-  max-width: 594px;
   height: 48px;
   margin-left: 32px;
   margin-right: 32px;
@@ -187,12 +194,21 @@ button {
   height: 100%;
   width: calc(100% - 32px);
   outline: none;
+  padding: 0;
 }
 
-.search_input::-moz-placeholder,
-.search_input::-webkit-input-placeholder {
+.search_input::placeholder {
   color: rgba(255, 255, 255, 0.5);
 }
+
+.search_input:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.search_input::-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
 .search_button {
   background-color: transparent;
   display: flex;
@@ -213,12 +229,15 @@ button {
   fill: rgba(255, 255, 255, 0.5);
 }
 
-.header_profile {
+.header_item-wrapper {
   display: flex;
+}
+
+.profile {
   margin-right: 40px;
 }
 
-.header_profile-link {
+.header_item {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -230,38 +249,24 @@ button {
   text-transform: capitalize;
   word-break: break-all;
 }
-.header_profile-text {
-  padding-top: 6px;
-}
 
-.cart {
-  display: flex;
-  align-items: center;
+.profile_text {
+  padding-top: 6px;
 }
 
 .cart_link {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: #ffffff;
-  font-family: inherit;
-  font-size: 13px;
-  line-height: 16px;
-  font-weight: 400;
-  text-transform: capitalize;
-  word-break: break-all;
 }
 
 .cart_count {
   position: absolute;
   z-index: 3;
   right: 0;
-  top: -5px;
+  top: -6px;
   display: flex;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
+  min-width: 16px;
+  padding: 0 3px;
+  border-radius: 16px;
   align-items: center;
   justify-content: center;
   background-color: #f55123;
@@ -271,4 +276,96 @@ button {
 }
 .cart_text {
   padding-top: 6px;
+}
+
+@media (max-width: 960px) {
+  .header_wrapper {
+    justify-content: stretch;
+  }
+
+  .header_logo {
+    max-width: none;
+  }
+
+  .search_wrapper {
+    width: 100%;
+    margin: 0;
+    margin-top: 20px;
+    order: 5;
+  }
+
+  .profile {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 660px) {
+  .container {
+    padding: 0px 13px;
+  }
+  .header_wrapper {
+    padding-top: 14px;
+    padding-bottom: 14px;
+    justify-content: space-between;
+  }
+
+  .header_logo {
+    margin-left: 0;
+  }
+  .search_wrapper {
+    height: auto;
+  }
+  .search_form {
+    padding: 0;
+  }
+  .main-nav_toggle {
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+  }
+
+  .main-nav_toggle-item {
+    width: 22px;
+    height: 2px;
+  }
+
+  .main-nav_toggle-item::after,
+  .main-nav_toggle-item::before {
+    height: 2px;
+  }
+
+  .main-nav_toggle-item::before {
+    top: -8px;
+  }
+
+  .main-nav_toggle-item::after {
+    top: 8px;
+    width: 16px;
+  }
+
+  .header_item-wrapper {
+    display: none;
+  }
+
+  .search_wrapper {
+    width: auto;
+    flex-grow: 0;
+    background-color: transparent;
+    margin-top: 0;
+  }
+
+  .search_input {
+    display: none;
+  }
+
+  .search_button {
+    width: 28px;
+    height: 28px;
+  }
+
+  .search_icon path {
+    fill: #ffffff;
+  }
 }
