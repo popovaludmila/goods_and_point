@@ -140,7 +140,7 @@ button {
   align-items: center;
   flex-wrap: wrap;
   padding-top: 18px;
-  padding-bottom: 18px;
+  padding-bottom: 19px;
 }
 
 .main-nav {
@@ -341,15 +341,15 @@ button {
   flex-direction: row;
   align-items: flex-start;
   flex-wrap: wrap;
-  padding-top: 24px;
+  padding-top: 23px;
   padding-bottom: 50px;
 }
 
 .main_left {
   display: flex;
   flex-direction: column;
-  max-width: calc(68.269% - 34px);
-  flex-basis: calc(68.269% - 34px);
+  max-width: calc(68.269% - 32px);
+  flex-basis: calc(68.269% - 32px);
 }
 
 .cart {
@@ -359,8 +359,8 @@ button {
 }
 
 .cart_title {
-  padding-top: 11px;
-  padding-bottom: 27px;
+  padding-top: 12px;
+  padding-bottom: 26px;
   font-size: 28px;
   line-height: 36px;
   font-weight: 700;
@@ -368,12 +368,14 @@ button {
   color: #000000;
 }
 
+
+
 .cart_all-selected {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding-bottom: 16px;
+  padding-bottom: 18px;
 }
 
 .checkbox {
@@ -391,6 +393,20 @@ button {
   padding-left: 33px;
 }
 
+.checkbox_icon {
+  display:flex;
+  position: relative;
+  width: 22px;
+  height: 22px;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  background-color: transparent;
+  border-radius: 6px;
+}
+
+.checkbox_icon::before,
 .checkbox_item::before {
   position: absolute;
   z-index: 2;
@@ -407,6 +423,7 @@ button {
   content: "";
 }
 
+.checkbox_input:checked + .checkbox_icon::before,
 .checkbox_input:checked + .checkbox_item::before {
   content: url("./images/icon-yes.svg");
   background-color: #cb11ab;
@@ -416,6 +433,8 @@ button {
 .accordion_button {
   display: flex;
   padding: 0;
+  margin-top: 2px;
+  margin-right: 2px;
 }
 
 .cart_list {
@@ -423,21 +442,35 @@ button {
   flex-direction: column;
   flex-wrap: wrap;
   width: 100%;
-  padding-top: 12px;
+  padding-top: 11px;
   padding-bottom: 20px;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .cart_item {
+  position: relative;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   margin: 0;
-  padding-bottom: 20px;
+  margin-bottom: 30px;
+  padding-left: 34px;
 }
 
 .cart_item-label {
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
   align-self: center;
+  cursor: pointer;
+  z-index: 2;
+  padding-left: 0;
+}
+
+.cart_item-label::before {
+  display: none;
 }
 
 .good {
@@ -448,8 +481,10 @@ button {
 }
 
 .good_img-link {
-  display: block;
+  display: inline-block;
   cursor: pointer;
+  max-width: 72px;
+  max-height: 96px;
 }
 
 .good_content {
@@ -459,7 +494,7 @@ button {
 
 .good_content--counter {
   justify-content: space-between;
-  width: 226px;
+  width: 228px;
 }
 
 .good_info {
@@ -471,6 +506,7 @@ button {
 }
 
 .good_name {
+  padding-top: 1px;
   font-family: inherit;
   font-size: 16px;
   font-weight: 400;
@@ -483,7 +519,7 @@ button {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: 8px 0;
+  padding: 7px 0;
 }
 
 .good_description-item {
@@ -491,7 +527,7 @@ button {
   font-size: 13px;
   font-weight: 400;
   line-height: 16px;
-  padding-right: 16px;
+  padding-right: 17px;
 }
 
 .good_store {
@@ -504,7 +540,7 @@ button {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding-bottom: 4px;
+  padding-bottom: 3px;
 }
 
 .good_store-wrap:last-child {
@@ -515,7 +551,7 @@ button {
   font-family: inherit;
   font-size: 13px;
   font-weight: 400;
-  line-height: 16px;
+  line-height: 17px;
   color: #9797af;
 }
 
@@ -535,7 +571,6 @@ button {
 .good_count {
   display: flex;
   flex-direction: column;
-  align-items: center;
   flex-wrap: wrap;
 }
 .good_count-number {
@@ -543,11 +578,12 @@ button {
   flex-direction: row;
   align-items: center;
   max-width: 100px;
+  min-height: 44px;
 }
 .counter_wrap {
   position: relative;
-  width: 44px;
-  height: 44px;
+  min-width: 28px;
+  height: 100%;
 }
 
 .counter_wrap::before {
@@ -557,28 +593,31 @@ button {
   width: 9px;
   height: 1px;
   background-color:#000000;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 21px;
+  left: 14px;
   z-index: 2;
 }
+
+.counter_wrap--minus::before {
+  height: 1px;
+  left: 11px;
+} 
 
 .counter_wrap--minus::after {
   position: absolute;
   content: "";
   display: block;
   width: 1px;
-  height: 9px;
+  height: 10px;
   background-color:#000000;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 17px;
+  left: 15px;
   z-index: 3;
 }
 
 .counter_btn {
   width: 100%;
-  min-width: 28px;
+  width: 100%;
   height: 100%;
   background-color: #ffffff;
   font-family: inherit;
@@ -601,6 +640,9 @@ button {
   min-width: 44px;
   height: 100%;
   padding: 4px;
+  padding-bottom: 7px;
+  padding-left: 8px;
+  font-size: 16px;
   border: 0;
   outline: none;
   text-align: center;
@@ -613,6 +655,8 @@ button {
   line-height: 16px;
   color: #ff3b30;
   padding: 8px 0;
+  padding-left: 2px;
+  padding-bottom: 10px;
 }
 
 .good_count-button {
@@ -629,7 +673,7 @@ button {
 .btn_action {
   font-size: 0;
   padding: 0;
-  margin-right: 16px;
+  margin-right: 18px;
 }
 
 .btn_action:last-child {
@@ -644,11 +688,14 @@ button {
 }
 
 .good_price-item {
-  padding-bottom: 5px;
   font-family: inherit;
-  font-size: 20px;
+  font-size: 21px;
   font-weight: 700;
-  line-height: 28px;
+  line-height: 21px;
+}
+
+.good_price-currency {
+  font-size: 15px;
 }
 
 .good_price-wrap {

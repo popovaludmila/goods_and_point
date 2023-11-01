@@ -85,6 +85,7 @@
         <div class="container">
             <div class="main_wrapper">
                 <div class="main_left">
+
                     <section class="cart">
                         <h2 class="cart_title">Корзина</h2>
                         <div class="cart_all-selected">
@@ -106,17 +107,16 @@
                         </div>
                         <ul class="cart_list">
                             <li class="cart_item">
-                                <label class="cart_item-label checkbox_item">
+                                <label class="checkbox_item cart_item-label">
                                     <input class="checkbox_input visually-hidden" type="checkbox">
+                                    <span class="checkbox_icon"></span>
                                 </label>
                                 <div class="cart_good good">
                                     <div class="good_content">
-                                        <div class="good_img-wrapper">
-                                            <a class="good_img-link" href="#">
-                                                <img class="good_img" src="./images/good-one.png" width="72" height="96"
-                                                    alt="Изображение футболка UZcotton мужская">
-                                            </a>
-                                        </div>
+                                        <a class="good_img-link" href="#">
+                                            <img class="good_img" src="./images/good-one.png" width="72" height="96"
+                                                alt="Изображение футболка UZcotton мужская">
+                                        </a>
                                         <div class="good_info">
                                             <a class="good_name" href="#">
                                                 <span>Футболка UZcotton мужская</span>
@@ -152,7 +152,8 @@
                                                         type="button"></button>
                                                 </div>
                                             </div>
-                                            <span class="good_count-balance">Осталось 2 шт.</span>
+                                            <span class="good_count-balance">Осталось <span
+                                                    class="balance_count">2</span> шт.</span>
                                             <div class="good_count-button btn">
                                                 <button class="btn_action" type="button">
                                                     <svg width="20" height="16" viewBox="0 0 20 16" fill="none"
@@ -182,7 +183,8 @@
 
                                         </div>
                                         <div class="good_price">
-                                            <span class="good_price-item">522 сом</span>
+                                            <span class="good_price-item">522 <span
+                                                    class="good_price-currency">сом</span> </span>
                                             <div class="good_price-wrap">
                                                 <span class="good_price-total">1051 сом</span>
                                             </div>
@@ -190,10 +192,10 @@
                                     </div>
                                 </div>
                             </li>
-
                             <li class="cart_item">
-                                <label class="cart_item-label checkbox_item">
+                                <label class="checkbox_item cart_item-label">
                                     <input class="checkbox_input visually-hidden" type="checkbox">
+                                    <span class="checkbox_icon"></span>
                                 </label>
                                 <div class="cart_good good">
                                     <div class="good_content">
@@ -278,6 +280,7 @@
                             </li>
                         </ul>
                     </section>
+
                 </div>
                 <div class="main_rigth">
                     <section class="total-info"></section>
