@@ -89,6 +89,7 @@
                     <section class="cart">
                         <h2 class="cart_title">Корзина</h2>
                         <div class="cart_all-selected">
+                            <h3 class="cart_subtitle visually-hidden"></h3>
                             <div class="cart_all-selected-toggle checkbox">
                                 <input class="checkbox_input visually-hidden" type="checkbox" id="all" name="select_all"
                                     checked>
@@ -192,6 +193,7 @@
                                     </div>
                                 </div>
                             </li>
+
                             <li class="cart_item">
                                 <label class="checkbox_item cart_item-label">
                                     <input class="checkbox_input visually-hidden" type="checkbox">
@@ -199,19 +201,18 @@
                                 </label>
                                 <div class="cart_good good">
                                     <div class="good_content">
-                                        <div class="good_img-wrapper">
-                                            <a class="good_img-link" href="#">
-                                                <img class="good_img" src="./images/good-one.png" width="72" height="96"
-                                                    alt="Изображение футболка UZcotton мужская">
-                                            </a>
-                                        </div>
+                                        <a class="good_img-link" href="#">
+                                            <img class="good_img" src="./images/good-two.png" width="72" height="96"
+                                                alt="Изображение cиликоновый чехол">
+                                        </a>
                                         <div class="good_info">
                                             <a class="good_name" href="#">
-                                                <span>Футболка UZcotton мужская</span>
+                                                <span>Силиконовый чехол картхолдер (отверстия) для карт, прозрачный кейс
+                                                    бампер на Apple iPhone XR, MobiSafe</span>
                                             </a>
                                             <div class="good_description">
-                                                <span class="good_description-item">Цвет: белый</span>
-                                                <span class="good_description-item">Размер: 56</span>
+                                                <span class="good_description-item">Цвет: прозрачный</span>
+                                                <span class="good_description-item visually-hidden"></span>
                                             </div>
                                             <div class="good_store">
                                                 <div class="good_store-wrap">
@@ -220,7 +221,7 @@
                                                         class="good_store-item good_store-item--i visually-hidden">i</span>
                                                 </div>
                                                 <div class="good_store-wrap">
-                                                    <span class="good_store-item">OOO Вайлдберриз</span>
+                                                    <span class="good_store-item">OOO Мегапрофстиль</span>
                                                     <span class="good_store-item good_store-item--i">i</span>
                                                 </div>
                                             </div>
@@ -233,14 +234,15 @@
                                                     <button class="counter_btn counter_btn--minus disabled"
                                                         type="button"></button>
                                                 </div>
-                                                <input class="counter_input" type="number" value="1" maxlength="3"
+                                                <input class="counter_input" type="number" value="200" maxlength="3"
                                                     aria-label="Количество" inputmode="numeric" pattern="[0-9]*">
                                                 <div class="counter_wrap counter_wrap--minus">
                                                     <button class="counter_btn counter_btn--plus"
                                                         type="button"></button>
                                                 </div>
                                             </div>
-                                            <span class="good_count-balance">Осталось 2 шт.</span>
+                                            <span class="good_count-balance visually-hidden">Осталось <span
+                                                    class="balance_count">2</span> шт.</span>
                                             <div class="good_count-button btn">
                                                 <button class="btn_action" type="button">
                                                     <svg width="20" height="16" viewBox="0 0 20 16" fill="none"
@@ -270,9 +272,386 @@
 
                                         </div>
                                         <div class="good_price">
-                                            <span class="good_price-item">522 сом</span>
+                                            <span class="good_price-item good_price-item--large">2 100 047&nbsp;
+                                                <span class="good_price-currency">сом</span>
+                                            </span>
+                                            <div class="good_price-wrap">
+                                                <span class="good_price-total">2 300 047 сом</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cart_item">
+                                <label class="checkbox_item cart_item-label">
+                                    <input class="checkbox_input visually-hidden" type="checkbox">
+                                    <span class="checkbox_icon"></span>
+                                </label>
+                                <div class="cart_good good">
+                                    <div class="good_content">
+                                        <a class="good_img-link" href="#">
+                                            <img class="good_img" src="./images/good-three.png" width="72" height="96"
+                                                alt="Изображение футболка UZcotton мужская">
+                                        </a>
+                                        <div class="good_info">
+                                            <a class="good_name" href="#">
+                                                <span>Карандаши цветные Faber-Castell "Замок", набор 24 цвета,
+                                                    заточенные, шестигранные, Faber-Castell</span>
+                                            </a>
+                                            <div class="good_description visually-hidden">
+                                                <span class="good_description-item"></span>
+                                                <span class="good_description-item"></span>
+                                            </div>
+                                            <div class="good_store">
+                                                <div class="good_store-wrap">
+                                                    <span class="good_store-item">Коледино WB</span>
+                                                    <span
+                                                        class="good_store-item good_store-item--i visually-hidden">i</span>
+                                                </div>
+                                                <div class="good_store-wrap">
+                                                    <span class="good_store-item">OOO Вайлдберриз</span>
+                                                    <span class="good_store-item good_store-item--i">i</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="good_content good_content--counter">
+                                        <div class="good_count">
+                                            <div class="good_count-number counter">
+                                                <div class="counter_wrap">
+                                                    <button class="counter_btn counter_btn--minus disabled"
+                                                        type="button"></button>
+                                                </div>
+                                                <input class="counter_input" type="number" value="2" maxlength="3"
+                                                    aria-label="Количество" inputmode="numeric" pattern="[0-9]*">
+                                                <div class="counter_wrap counter_wrap--minus">
+                                                    <button class="counter_btn counter_btn--plus disabled"
+                                                        type="button"></button>
+                                                </div>
+                                            </div>
+                                            <span class="good_count-balance">Осталось <span
+                                                    class="balance_count">2</span> шт.</span>
+                                            <div class="good_count-button btn">
+                                                <button class="btn_action" type="button">
+                                                    <svg width="20" height="16" viewBox="0 0 20 16" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M3.03396 2.05857C2.26589 2.75224 1.76684 3.83284 1.99493 5.42928C2.22332 7.02783 3.26494 8.68522 4.80436 10.3478C6.25865 11.9184 8.10962 13.4437 9.99996 14.874C11.8903 13.4437 13.7413 11.9184 15.1956 10.3478C16.735 8.68521 17.7766 7.02783 18.005 5.4293C18.233 3.83285 17.734 2.75224 16.9659 2.05856C16.1766 1.34572 15.055 1 14 1C12.1319 1 11.0923 2.08479 10.5177 2.68443C10.4581 2.7466 10.4035 2.80356 10.3535 2.85355C10.1582 3.04882 9.84166 3.04882 9.6464 2.85355C9.59641 2.80356 9.54182 2.7466 9.48224 2.68443C8.90757 2.08479 7.86797 1 5.99995 1C4.94495 1 3.82325 1.34573 3.03396 2.05857ZM2.36371 1.31643C3.37369 0.404274 4.75202 0 5.99995 0C8.07123 0 9.34539 1.11257 9.99996 1.77862C10.6545 1.11257 11.9287 0 14 0C15.2479 0 16.6262 0.404275 17.6362 1.31644C18.6674 2.24776 19.2668 3.66715 18.9949 5.5707C18.7233 7.47217 17.5149 9.31479 15.9294 11.0272C14.3355 12.7486 12.3064 14.3952 10.3 15.9C10.1222 16.0333 9.87773 16.0333 9.69995 15.9C7.69353 14.3952 5.66443 12.7485 4.0706 11.0272C2.48503 9.31478 1.27665 7.47217 1.00498 5.57072C0.733012 3.66716 1.33249 2.24776 2.36371 1.31643Z"
+                                                            fill="black" />
+                                                    </svg>
+                                                    <span>В избранное</span>
+                                                </button>
+                                                <button class="btn_action" type="button">
+                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M0.5 3C0.5 2.72386 0.723858 2.5 1 2.5H15C15.2761 2.5 15.5 2.72386 15.5 3C15.5 3.27614 15.2761 3.5 15 3.5H1C0.723858 3.5 0.5 3.27614 0.5 3Z"
+                                                            fill="black" />
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M1.4584 2.5H14.5059L13.6411 13.6926C13.5405 14.9947 12.4546 16 11.1486 16H4.84639C3.54299 16 2.45829 14.9986 2.35435 13.6994L1.4584 2.5ZM2.5416 3.5L3.35117 13.6196C3.41353 14.3992 4.06435 15 4.84639 15H11.1486C11.9322 15 12.5837 14.3968 12.6441 13.6155L13.4256 3.5H2.5416Z"
+                                                            fill="black" />
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M11 3.5H5V1.46875C5 0.657582 5.65758 0 6.46875 0H9.53125C10.3424 0 11 0.657582 11 1.46875V3.5ZM6.46875 1C6.20987 1 6 1.20987 6 1.46875V2.5H10V1.46875C10 1.20987 9.79013 1 9.53125 1H6.46875Z"
+                                                            fill="black" />
+                                                    </svg>
+                                                    <span>Удалить</span>
+                                                </button>
+                                            </div>
+
+                                        </div>
+                                        <div class="good_price">
+                                            <span class="good_price-item">494 <span
+                                                    class="good_price-currency">сом</span> </span>
+                                            <div class="good_price-wrap">
+                                                <span class="good_price-total">950 сом</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section class="cart cart--off">
+                        <h2 class="cart_title visually-hidden">Товары не в наличие</h2>
+                        <div class="cart_all-selected">
+                            <h3 class="cart_subtitle">Отсутствуют <span>· 3 </span>товара</h3>
+                            <div class="cart_all-selected-toggle checkbox visually-hidden">
+                                <input class="checkbox_input visually-hidden" type="checkbox" id="all" name="select_all"
+                                    checked>
+                                <label class="checkbox_item" for="all">Выбрать все</label>
+                            </div>
+                            <div class="cart_accordion accordion">
+                                <button class="accordion_button" type="button">
+                                    <svg class="accordion_icon" width="16" height="10" viewBox="0 0 16 10" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M15.3417 8.91208C14.966 9.29821 14.3477 9.30437 13.9644 8.92579L8.14183 3.17475C8.06342 3.0973 7.93715 3.09788 7.85945 3.17603L2.15281 8.91591C1.76725 9.30371 1.14293 9.3137 0.745162 8.93845C0.335488 8.55196 0.321627 7.90488 0.714373 7.5012L7.28326 0.749487C7.67588 0.345934 8.32412 0.345934 8.71674 0.749487L15.3417 7.55884C15.7082 7.93549 15.7082 8.53542 15.3417 8.91208Z"
+                                            fill="#9797AF" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <ul class="cart_list">
+                            <li class="cart_item cart_item--off">
+                                <label class="checkbox_item cart_item-label visually-hidden">
+                                    <input class="checkbox_input visually-hidden" type="checkbox">
+                                    <span class="checkbox_icon"></span>
+                                </label>
+                                <div class="cart_good good">
+                                    <div class="good_content good_content--left">
+                                        <a class="good_img-link" href="#">
+                                            <img class="good_img good_img--off" src="./images/good-one.png" width="72" height="96"
+                                                alt="Изображение футболка UZcotton мужская">
+                                        </a>
+                                        <div class="good_info">
+                                            <a class="good_name" href="#">
+                                                <span>Футболка UZcotton мужская</span>
+                                            </a>
+                                            <div class="good_description">
+                                                <span class="good_description-item">Цвет: белый</span>
+                                                <span class="good_description-item">Размер: 56</span>
+                                            </div>
+                                            <div class="good_store visually-hidden">
+                                                <div class="good_store-wrap">
+                                                    <span class="good_store-item">Коледино WB</span>
+                                                    <span
+                                                        class="good_store-item good_store-item--i visually-hidden">i</span>
+                                                </div>
+                                                <div class="good_store-wrap">
+                                                    <span class="good_store-item">OOO Вайлдберриз</span>
+                                                    <span class="good_store-item good_store-item--i">i</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="good_content good_content--counter good_content--off">
+                                        <div class="good_count">
+                                            <div class="good_count-number counter visually-hidden">
+                                                <div class="counter_wrap">
+                                                    <button class="counter_btn counter_btn--minus disabled"
+                                                        type="button"></button>
+                                                </div>
+                                                <input class="counter_input" type="number" value="1" maxlength="3"
+                                                    aria-label="Количество" inputmode="numeric" pattern="[0-9]*">
+                                                <div class="counter_wrap counter_wrap--minus">
+                                                    <button class="counter_btn counter_btn--plus"
+                                                        type="button"></button>
+                                                </div>
+                                            </div>
+                                            <span class="good_count-balance visually-hidden">Осталось <span
+                                                    class="balance_count">2</span> шт.</span>
+                                            <div class="good_count-button btn good_count-button--off">
+                                                <button class="btn_action" type="button">
+                                                    <svg width="20" height="16" viewBox="0 0 20 16" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M3.03396 2.05857C2.26589 2.75224 1.76684 3.83284 1.99493 5.42928C2.22332 7.02783 3.26494 8.68522 4.80436 10.3478C6.25865 11.9184 8.10962 13.4437 9.99996 14.874C11.8903 13.4437 13.7413 11.9184 15.1956 10.3478C16.735 8.68521 17.7766 7.02783 18.005 5.4293C18.233 3.83285 17.734 2.75224 16.9659 2.05856C16.1766 1.34572 15.055 1 14 1C12.1319 1 11.0923 2.08479 10.5177 2.68443C10.4581 2.7466 10.4035 2.80356 10.3535 2.85355C10.1582 3.04882 9.84166 3.04882 9.6464 2.85355C9.59641 2.80356 9.54182 2.7466 9.48224 2.68443C8.90757 2.08479 7.86797 1 5.99995 1C4.94495 1 3.82325 1.34573 3.03396 2.05857ZM2.36371 1.31643C3.37369 0.404274 4.75202 0 5.99995 0C8.07123 0 9.34539 1.11257 9.99996 1.77862C10.6545 1.11257 11.9287 0 14 0C15.2479 0 16.6262 0.404275 17.6362 1.31644C18.6674 2.24776 19.2668 3.66715 18.9949 5.5707C18.7233 7.47217 17.5149 9.31479 15.9294 11.0272C14.3355 12.7486 12.3064 14.3952 10.3 15.9C10.1222 16.0333 9.87773 16.0333 9.69995 15.9C7.69353 14.3952 5.66443 12.7485 4.0706 11.0272C2.48503 9.31478 1.27665 7.47217 1.00498 5.57072C0.733012 3.66716 1.33249 2.24776 2.36371 1.31643Z"
+                                                            fill="black" />
+                                                    </svg>
+                                                    <span>В избранное</span>
+                                                </button>
+                                                <button class="btn_action" type="button">
+                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M0.5 3C0.5 2.72386 0.723858 2.5 1 2.5H15C15.2761 2.5 15.5 2.72386 15.5 3C15.5 3.27614 15.2761 3.5 15 3.5H1C0.723858 3.5 0.5 3.27614 0.5 3Z"
+                                                            fill="black" />
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M1.4584 2.5H14.5059L13.6411 13.6926C13.5405 14.9947 12.4546 16 11.1486 16H4.84639C3.54299 16 2.45829 14.9986 2.35435 13.6994L1.4584 2.5ZM2.5416 3.5L3.35117 13.6196C3.41353 14.3992 4.06435 15 4.84639 15H11.1486C11.9322 15 12.5837 14.3968 12.6441 13.6155L13.4256 3.5H2.5416Z"
+                                                            fill="black" />
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M11 3.5H5V1.46875C5 0.657582 5.65758 0 6.46875 0H9.53125C10.3424 0 11 0.657582 11 1.46875V3.5ZM6.46875 1C6.20987 1 6 1.20987 6 1.46875V2.5H10V1.46875C10 1.20987 9.79013 1 9.53125 1H6.46875Z"
+                                                            fill="black" />
+                                                    </svg>
+                                                    <span>Удалить</span>
+                                                </button>
+                                            </div>
+
+                                        </div>
+                                        <div class="good_price visually-hidden">
+                                            <span class="good_price-item">522 <span
+                                                    class="good_price-currency">сом</span> </span>
                                             <div class="good_price-wrap">
                                                 <span class="good_price-total">1051 сом</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cart_item cart_item--off">
+                                <label class="checkbox_item cart_item-label visually-hidden">
+                                    <input class="checkbox_input visually-hidden" type="checkbox">
+                                    <span class="checkbox_icon"></span>
+                                </label>
+                                <div class="cart_good good">
+                                    <div class="good_content good_content--left">
+                                        <a class="good_img-link" href="#">
+                                            <img class="good_img good_img--off" src="./images/good-two.png" width="72" height="96"
+                                                alt="Изображение cиликоновый чехол">
+                                        </a>
+                                        <div class="good_info">
+                                            <a class="good_name" href="#">
+                                                <span>Силиконовый чехол картхолдер (отверстия) для карт, прозрачный кейс
+                                                    бампер на Apple iPhone XR, MobiSafe</span>
+                                            </a>
+                                            <div class="good_description">
+                                                <span class="good_description-item">Цвет: прозрачный</span>
+                                                <span class="good_description-item visually-hidden"></span>
+                                            </div>
+                                            <div class="good_store visually-hidden">
+                                                <div class="good_store-wrap">
+                                                    <span class="good_store-item">Коледино WB</span>
+                                                    <span
+                                                        class="good_store-item good_store-item--i visually-hidden">i</span>
+                                                </div>
+                                                <div class="good_store-wrap">
+                                                    <span class="good_store-item">OOO Мегапрофстиль</span>
+                                                    <span class="good_store-item good_store-item--i">i</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="good_content good_content--counter good_content--off">
+                                        <div class="good_count">
+                                            <div class="good_count-number counter visually-hidden">
+                                                <div class="counter_wrap">
+                                                    <button class="counter_btn counter_btn--minus disabled"
+                                                        type="button"></button>
+                                                </div>
+                                                <input class="counter_input" type="number" value="200" maxlength="3"
+                                                    aria-label="Количество" inputmode="numeric" pattern="[0-9]*">
+                                                <div class="counter_wrap counter_wrap--minus">
+                                                    <button class="counter_btn counter_btn--plus"
+                                                        type="button"></button>
+                                                </div>
+                                            </div>
+                                            <span class="good_count-balance visually-hidden">Осталось <span
+                                                    class="balance_count">2</span> шт.</span>
+                                            <div class="good_count-button btn good_count-button--off">
+                                                <button class="btn_action" type="button">
+                                                    <svg width="20" height="16" viewBox="0 0 20 16" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M3.03396 2.05857C2.26589 2.75224 1.76684 3.83284 1.99493 5.42928C2.22332 7.02783 3.26494 8.68522 4.80436 10.3478C6.25865 11.9184 8.10962 13.4437 9.99996 14.874C11.8903 13.4437 13.7413 11.9184 15.1956 10.3478C16.735 8.68521 17.7766 7.02783 18.005 5.4293C18.233 3.83285 17.734 2.75224 16.9659 2.05856C16.1766 1.34572 15.055 1 14 1C12.1319 1 11.0923 2.08479 10.5177 2.68443C10.4581 2.7466 10.4035 2.80356 10.3535 2.85355C10.1582 3.04882 9.84166 3.04882 9.6464 2.85355C9.59641 2.80356 9.54182 2.7466 9.48224 2.68443C8.90757 2.08479 7.86797 1 5.99995 1C4.94495 1 3.82325 1.34573 3.03396 2.05857ZM2.36371 1.31643C3.37369 0.404274 4.75202 0 5.99995 0C8.07123 0 9.34539 1.11257 9.99996 1.77862C10.6545 1.11257 11.9287 0 14 0C15.2479 0 16.6262 0.404275 17.6362 1.31644C18.6674 2.24776 19.2668 3.66715 18.9949 5.5707C18.7233 7.47217 17.5149 9.31479 15.9294 11.0272C14.3355 12.7486 12.3064 14.3952 10.3 15.9C10.1222 16.0333 9.87773 16.0333 9.69995 15.9C7.69353 14.3952 5.66443 12.7485 4.0706 11.0272C2.48503 9.31478 1.27665 7.47217 1.00498 5.57072C0.733012 3.66716 1.33249 2.24776 2.36371 1.31643Z"
+                                                            fill="black" />
+                                                    </svg>
+                                                    <span>В избранное</span>
+                                                </button>
+                                                <button class="btn_action" type="button">
+                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M0.5 3C0.5 2.72386 0.723858 2.5 1 2.5H15C15.2761 2.5 15.5 2.72386 15.5 3C15.5 3.27614 15.2761 3.5 15 3.5H1C0.723858 3.5 0.5 3.27614 0.5 3Z"
+                                                            fill="black" />
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M1.4584 2.5H14.5059L13.6411 13.6926C13.5405 14.9947 12.4546 16 11.1486 16H4.84639C3.54299 16 2.45829 14.9986 2.35435 13.6994L1.4584 2.5ZM2.5416 3.5L3.35117 13.6196C3.41353 14.3992 4.06435 15 4.84639 15H11.1486C11.9322 15 12.5837 14.3968 12.6441 13.6155L13.4256 3.5H2.5416Z"
+                                                            fill="black" />
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M11 3.5H5V1.46875C5 0.657582 5.65758 0 6.46875 0H9.53125C10.3424 0 11 0.657582 11 1.46875V3.5ZM6.46875 1C6.20987 1 6 1.20987 6 1.46875V2.5H10V1.46875C10 1.20987 9.79013 1 9.53125 1H6.46875Z"
+                                                            fill="black" />
+                                                    </svg>
+                                                    <span>Удалить</span>
+                                                </button>
+                                            </div>
+
+                                        </div>
+                                        <div class="good_price visually-hidden">
+                                            <span class="good_price-item good_price-item--large">2 100 047&nbsp;
+                                                <span class="good_price-currency">сом</span>
+                                            </span>
+                                            <div class="good_price-wrap">
+                                                <span class="good_price-total">2 300 047 сом</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="cart_item cart_item--off">
+                                <label class="checkbox_item cart_item-label visually-hidden">
+                                    <input class="checkbox_input visually-hidden" type="checkbox">
+                                    <span class="checkbox_icon"></span>
+                                </label>
+                                <div class="cart_good good">
+                                    <div class="good_content good_content--left">
+                                        <a class="good_img-link" href="#">
+                                            <img class="good_img good_img--off" src="./images/good-three.png" width="72" height="96"
+                                                alt="Изображение футболка UZcotton мужская">
+                                        </a>
+                                        <div class="good_info">
+                                            <a class="good_name" href="#">
+                                                <span>Карандаши цветные Faber-Castell "Замок", набор 24 цвета,
+                                                    заточенные, шестигранные, Faber-Castell</span>
+                                            </a>
+                                            <div class="good_description visually-hidden">
+                                                <span class="good_description-item"></span>
+                                                <span class="good_description-item"></span>
+                                            </div>
+                                            <div class="good_store visually-hidden">
+                                                <div class="good_store-wrap">
+                                                    <span class="good_store-item">Коледино WB</span>
+                                                    <span
+                                                        class="good_store-item good_store-item--i visually-hidden">i</span>
+                                                </div>
+                                                <div class="good_store-wrap">
+                                                    <span class="good_store-item">OOO Вайлдберриз</span>
+                                                    <span class="good_store-item good_store-item--i">i</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="good_content good_content--counter good_content--off">
+                                        <div class="good_count">
+                                            <div class="good_count-number counter visually-hidden">
+                                                <div class="counter_wrap">
+                                                    <button class="counter_btn counter_btn--minus disabled"
+                                                        type="button"></button>
+                                                </div>
+                                                <input class="counter_input" type="number" value="2" maxlength="3"
+                                                    aria-label="Количество" inputmode="numeric" pattern="[0-9]*">
+                                                <div class="counter_wrap counter_wrap--minus">
+                                                    <button class="counter_btn counter_btn--plus disabled"
+                                                        type="button"></button>
+                                                </div>
+                                            </div>
+                                            <span class="good_count-balance visually-hidden">Осталось <span
+                                                    class="balance_count">2</span> шт.</span>
+                                            <div class="good_count-button btn good_count-button--off">
+                                                <button class="btn_action" type="button">
+                                                    <svg width="20" height="16" viewBox="0 0 20 16" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M3.03396 2.05857C2.26589 2.75224 1.76684 3.83284 1.99493 5.42928C2.22332 7.02783 3.26494 8.68522 4.80436 10.3478C6.25865 11.9184 8.10962 13.4437 9.99996 14.874C11.8903 13.4437 13.7413 11.9184 15.1956 10.3478C16.735 8.68521 17.7766 7.02783 18.005 5.4293C18.233 3.83285 17.734 2.75224 16.9659 2.05856C16.1766 1.34572 15.055 1 14 1C12.1319 1 11.0923 2.08479 10.5177 2.68443C10.4581 2.7466 10.4035 2.80356 10.3535 2.85355C10.1582 3.04882 9.84166 3.04882 9.6464 2.85355C9.59641 2.80356 9.54182 2.7466 9.48224 2.68443C8.90757 2.08479 7.86797 1 5.99995 1C4.94495 1 3.82325 1.34573 3.03396 2.05857ZM2.36371 1.31643C3.37369 0.404274 4.75202 0 5.99995 0C8.07123 0 9.34539 1.11257 9.99996 1.77862C10.6545 1.11257 11.9287 0 14 0C15.2479 0 16.6262 0.404275 17.6362 1.31644C18.6674 2.24776 19.2668 3.66715 18.9949 5.5707C18.7233 7.47217 17.5149 9.31479 15.9294 11.0272C14.3355 12.7486 12.3064 14.3952 10.3 15.9C10.1222 16.0333 9.87773 16.0333 9.69995 15.9C7.69353 14.3952 5.66443 12.7485 4.0706 11.0272C2.48503 9.31478 1.27665 7.47217 1.00498 5.57072C0.733012 3.66716 1.33249 2.24776 2.36371 1.31643Z"
+                                                            fill="black" />
+                                                    </svg>
+                                                    <span>В избранное</span>
+                                                </button>
+                                                <button class="btn_action" type="button">
+                                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M0.5 3C0.5 2.72386 0.723858 2.5 1 2.5H15C15.2761 2.5 15.5 2.72386 15.5 3C15.5 3.27614 15.2761 3.5 15 3.5H1C0.723858 3.5 0.5 3.27614 0.5 3Z"
+                                                            fill="black" />
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M1.4584 2.5H14.5059L13.6411 13.6926C13.5405 14.9947 12.4546 16 11.1486 16H4.84639C3.54299 16 2.45829 14.9986 2.35435 13.6994L1.4584 2.5ZM2.5416 3.5L3.35117 13.6196C3.41353 14.3992 4.06435 15 4.84639 15H11.1486C11.9322 15 12.5837 14.3968 12.6441 13.6155L13.4256 3.5H2.5416Z"
+                                                            fill="black" />
+                                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                                            d="M11 3.5H5V1.46875C5 0.657582 5.65758 0 6.46875 0H9.53125C10.3424 0 11 0.657582 11 1.46875V3.5ZM6.46875 1C6.20987 1 6 1.20987 6 1.46875V2.5H10V1.46875C10 1.20987 9.79013 1 9.53125 1H6.46875Z"
+                                                            fill="black" />
+                                                    </svg>
+                                                    <span>Удалить</span>
+                                                </button>
+                                            </div>
+
+                                        </div>
+                                        <div class="good_price visually-hidden">
+                                            <span class="good_price-item">494 <span
+                                                    class="good_price-currency">сом</span> </span>
+                                            <div class="good_price-wrap">
+                                                <span class="good_price-total">950 сом</span>
                                             </div>
                                         </div>
                                     </div>

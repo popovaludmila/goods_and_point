@@ -368,7 +368,13 @@ button {
   color: #000000;
 }
 
-
+.cart_subtitle {
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: #000000;
+}
 
 .cart_all-selected {
   display: flex;
@@ -394,7 +400,7 @@ button {
 }
 
 .checkbox_icon {
-  display:flex;
+  display: flex;
   position: relative;
   width: 22px;
   height: 22px;
@@ -443,7 +449,7 @@ button {
   flex-wrap: wrap;
   width: 100%;
   padding-top: 11px;
-  padding-bottom: 20px;
+  padding-bottom: 6px;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
@@ -453,17 +459,19 @@ button {
   flex-direction: row;
   flex-wrap: wrap;
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 32px;
   padding-left: 34px;
+}
+
+.cart_item--off {
+  padding-left: 0;
 }
 
 .cart_item-label {
   position: absolute;
   display: inline-block;
-  top: 50%;
+  top: 38px;
   left: 0;
-  transform: translateY(-50%);
-  align-self: center;
   cursor: pointer;
   z-index: 2;
   padding-left: 0;
@@ -480,6 +488,10 @@ button {
   width: 100%;
 }
 
+.good_img--off {
+  filter: grayscale(1);
+}
+
 .good_img-link {
   display: inline-block;
   cursor: pointer;
@@ -490,11 +502,20 @@ button {
 .good_content {
   display: flex;
   flex-direction: row;
+  max-width: 340px;
 }
 
 .good_content--counter {
   justify-content: space-between;
-  width: 228px;
+  min-width: 228px;
+}
+
+.good_content--left {
+  min-width: 380px;
+}
+
+.good_content--off {
+  min-width: 182px;
 }
 
 .good_info {
@@ -502,7 +523,6 @@ button {
   flex-direction: column;
   flex-wrap: wrap;
   margin-left: 16px;
-  max-width: 275px;
 }
 
 .good_name {
@@ -519,7 +539,7 @@ button {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: 7px 0;
+  padding-top: 7px;
 }
 
 .good_description-item {
@@ -533,6 +553,7 @@ button {
 .good_store {
   display: flex;
   flex-direction: column;
+  padding-top: 7px;
 }
 
 .good_store-wrap {
@@ -592,7 +613,7 @@ button {
   display: block;
   width: 9px;
   height: 1px;
-  background-color:#000000;
+  background-color: #000000;
   top: 21px;
   left: 14px;
   z-index: 2;
@@ -601,7 +622,7 @@ button {
 .counter_wrap--minus::before {
   height: 1px;
   left: 11px;
-} 
+}
 
 .counter_wrap--minus::after {
   position: absolute;
@@ -609,7 +630,7 @@ button {
   display: block;
   width: 1px;
   height: 10px;
-  background-color:#000000;
+  background-color: #000000;
   top: 17px;
   left: 15px;
   z-index: 3;
@@ -654,9 +675,8 @@ button {
   font-weight: 400;
   line-height: 16px;
   color: #ff3b30;
-  padding: 8px 0;
+  padding-top: 8px;
   padding-left: 2px;
-  padding-bottom: 10px;
 }
 
 .good_count-button {
@@ -664,6 +684,11 @@ button {
   flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
+  padding-top: 10px;
+}
+
+.good_count-button--off {
+  padding-top: 0;
 }
 
 .btn {
@@ -694,22 +719,28 @@ button {
   line-height: 21px;
 }
 
+.good_price-item--large {
+  font-size: 16px;
+  line-height: 23px;
+}
+
 .good_price-currency {
   font-size: 15px;
 }
 
 .good_price-wrap {
   position: relative;
-  border-bottom: 1px dotted #9797af;
 }
 
 .good_price-total {
+  display: inline-block;
   font-family: inherit;
   font-size: 13px;
   font-weight: 400;
   line-height: 16px;
   color: #9797af;
- text-decoration: line-through;
+  text-decoration: line-through;
+  border-bottom: 1px dotted #9797af;
 }
 
 .main_rigth {
