@@ -664,7 +664,7 @@
                         <div class="delivery_wrapper">
                             <div class="delivery_title-wrap">
                                 <h2 class="delivery_title title">Способ доставки</h2>
-                                <span class="delivery_change">Изменить</span>
+                                <button class="delivery_change">Изменить</button>
                             </div>
                             <ul class="delivery_content">
                                 <li class="delivery_item">
@@ -745,10 +745,60 @@
                         </div>
                     </section>
 
+                    <section class="payment">
+                        <div class="payment_wrapper">
+                            <div class="payment_title-wrap">
+                                <h2 class="payment_title title">Способ оплаты</h2>
+                                <button class="payment_change">Изменить</button>
+                            </div>
+                            <div class="payment_content">
+                                <div class="payment_card card">
+                                    <span class="card_icon"></span>
+                                    <span class="card_number">1234 56•• •••• 1234</span>
+                                    <span class="card_date">01/30</span>
+                                </div>
+                                <span class="payment_notification">Спишем оплату с карты при получении</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="contacts">
+                        <div class="contacts_wrapper">
+                            <h2 class="contacts_title title">Получатель</h2>
+                            <div class="contacts_content">
+                                <form class="contacts_form form" action="" method="post">
+                                    <div class="form_item form_item--top">
+                                        <label class="form_label" for="">Имя</label>
+                                        <input class="form_input" type="text" placeholder="Имя">
+                                    </div>
+                                    <div class="form_item form_item--top">
+                                        <label class="form_label" for="">Фамилия</label>
+                                        <input class="form_input" type="text" placeholder="Фамилия">
+                                    </div>
+                                    <div class="form_item">
+                                        <label class="form_label" for="">Почта</label>
+                                        <input class="form_input" type="email" imputmode="email" placeholder="Почта">
+                                    </div>
+                                    <div class="form_item">
+                                        <label class="form_label form_label--active" for="">Телефон</label>
+                                        <input class="form_input" type="tel"  inputmode="numeric" placeholder="Телефон">
+                                    </div>
+                                    <div class="form_item">
+                                        <label class="form_label" for="">ИНН</label>
+                                        <input class="form_input" type="text" placeholder="ИНН">
+                                        <span class="form_item-notification">Для таможенного оформления</span>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </section>
+
                 </div>
-                <div class="main_rigth">
-                    <section class="total-info"></section>
-                </div>
+                <aside class="main_rigth">
+                    <section class="total-info">
+                        
+                    </section>
+                </aside>
             </div>
         </div>
     </main>

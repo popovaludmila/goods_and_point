@@ -345,7 +345,7 @@ button {
   align-items: flex-start;
   flex-wrap: wrap;
   padding-top: 23px;
-  padding-bottom: 50px;
+  padding-bottom: 33px;
 }
 
 .main_left {
@@ -452,7 +452,7 @@ button {
   flex-wrap: wrap;
   width: 100%;
   padding-top: 11px;
-  padding-bottom: 6px;
+  padding-bottom: 7px;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
@@ -761,6 +761,7 @@ button {
   width: 100%;
   background-color: #ffffff;
   border-radius: 16px;
+  margin-bottom: 16px;
 }
 
 .delivery_wrapper {
@@ -770,7 +771,7 @@ button {
   padding-top: 16px;
   padding-left: 24px;
   padding-right: 24px;
-  padding-bottom: 24px;
+  padding-bottom: 26px;
   font-family: inherit;
 }
 
@@ -798,6 +799,9 @@ button {
 .delivery_change {
   font-weight: 700;
   color: #cb11ab;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 .delivery_point {
@@ -809,8 +813,8 @@ button {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  padding-top: 16px;
-  padding-bottom: 24px;
+  padding-top: 17px;
+  padding-bottom: 27px;
 }
 
 .delivery_item {
@@ -842,7 +846,7 @@ button {
 .address_info {
   display: flex;
   flex-direction: row;
-
+  padding-top: 3px;
   font-family: inherit;
   font-size: 13px;
   line-height: 16px;
@@ -912,7 +916,7 @@ button {
   position: absolute;
   display: inline-block;
   z-index: 3;
-  padding: 0 6px;
+  padding: 0 5px;
   top: 0;
   transform: translateY(-50%);
   right: -4px;
@@ -921,7 +925,7 @@ button {
   font-family: inherit;
   font-size: 10px;
   font-weight: 600;
-  line-height: 18px;
+  line-height: 15px;
   text-align: center;
   color: #ffffff;
 }
@@ -944,8 +948,8 @@ button {
   z-index: 3;
   width: 20px;
   height: 20px;
-  top: 0;
-  left: 0;
+  top: -2px;
+  left: 2px;
   content: url("./images//icon-circle-green.svg");
   text-align: center;
 }
@@ -953,8 +957,8 @@ button {
 .notification::after {
   position: absolute;
   display: block;
-  top: 0;
-  left: 0;
+  top: -1px;
+  left: 2px;
   z-index: 4;
   text-align: center;
   width: 20px;
@@ -965,11 +969,170 @@ button {
 .notification_green {
   position: relative;
   display: inline-block;
-  color: #0CB477;
+  color: #0cb477;
   border-bottom: 1px dashed rgba(12, 180, 119, 0.2);
 }
 /* =========================== */
 
+.payment {
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 16px;
+  margin-bottom: 16px;
+}
+
+.payment_wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-top: 16px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 24px;
+  font-family: inherit;
+}
+
+.payment_title-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.payment_change {
+  color: #cb11ab;
+  font-weight: 700;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.payment_content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-top: 16px;
+}
+
+.payment_card {
+  display: flex;
+  flex-direction: row;
+}
+
+.payment_notification {
+  padding-top: 8px;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #9797af;
+}
+
+.card_icon {
+  display: inline-block;
+  width: 32px;
+  height: 24px;
+  border-radius: 4px;
+  background-color: #f6f6fa;
+  margin-right: 8px;
+  background-image: url("./images/card-mir.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.card_number {
+  padding-right: 12px;
+}
+
+/* ========================== */
+.contacts {
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 16px;
+  margin-bottom: 16px;
+}
+
+.contacts_wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-top: 16px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 26px;
+  font-family: inherit;
+}
+
+.contacts_content {
+  padding-top: 17px;
+  max-width: 724px;
+}
+
+.contacts_form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.form_item {
+  display: flex;
+  flex-direction: column;
+  height: 45px;
+  padding-right: 24px;
+  margin-bottom: 18px;
+  width: calc(100%/3);
+  justify-content: space-between;
+}
+
+.form_item--top {
+  width: 50%;
+}
+
+.form_label {
+  font-family: inherit;
+  font-size: 0;
+  font-weight: 400;
+  line-height: 16px;
+  color: #9797AF;
+  text-align: left;
+}
+
+.form_label--active {
+  font-size: 13px;
+}
+
+.form_input {
+  padding: 7px 3px;
+  padding-bottom: 3px;
+  border: 0;
+  outline: none;
+  font-size: 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.form_input::placeholder {
+  color: #9797AF;
+}
+
+.form_input:-ms-input-placeholder {
+  color: #9797AF;
+}
+
+.form_input::-ms-input-placeholder {
+  color: #9797AF
+}
+
+
+.form_item-notification{
+  padding-top: 4px;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+/* =========================== */
 @media (max-width: 960px) {
   .header_wrapper {
     justify-content: stretch;
