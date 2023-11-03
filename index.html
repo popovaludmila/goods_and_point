@@ -738,6 +738,7 @@
 
                             </ul>
                             <div class="delivery_notification notification">
+                                <span class="notification_icon"></span>
                                 <p class="notification_text">Обратная доставка товаров на склад при отказе —
                                     <span class="notification_green">бесплатно</span>
                                 </p>
@@ -781,7 +782,7 @@
                                     </div>
                                     <div class="form_item">
                                         <label class="form_label form_label--active" for="">Телефон</label>
-                                        <input class="form_input" type="tel"  inputmode="numeric" placeholder="Телефон">
+                                        <input class="form_input" type="tel" inputmode="numeric" placeholder="Телефон">
                                     </div>
                                     <div class="form_item">
                                         <label class="form_label" for="">ИНН</label>
@@ -795,8 +796,94 @@
 
                 </div>
                 <aside class="main_rigth">
-                    <section class="total-info">
-                        
+                    <section class="order">
+                        <div class="order_wrapper">
+                            <div class="order_description">
+                                <div class="order_description-item order_description-item--total">
+                                    <span class="order_description-label order_description-label--total">Итого</span>
+                                    <span class="order_description-price order_description-price--total">2 101 063
+                                        сом</span>
+                                </div>
+                                <div class="order_description-item">
+                                    <span class="order_description-label">203 товара</span>
+                                    <span class="order_description-price">2 302 048 сом</span>
+                                </div>
+                                <div class="order_description-item">
+                                    <span class="order_description-label">Скидка</span>
+                                    <span class="order_description-price">−200 985 сом</span>
+                                </div>
+                                <div class="order_description-item">
+                                    <span class="order_description-label">Доставка</span>
+                                    <span class="order_description-price">Бесплатно</span>
+                                </div>
+                            </div>
+                            <div class="order_delivery">
+                                <div class="order_delivery-wrap">
+                                    <span class="order_delivery-title">Доставка в пункт выдачи</span>
+                                    <button class="order_delivery_change">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M11.1585 1.05991L14.9401 4.84154L4.72705 15.0546L0.735435 15.8529C0.385575 15.9229 0.0771149 15.6144 0.147087 15.2646L0.94541 11.273L11.1585 1.05991ZM2.17707 11.9321L11.1585 2.95072L13.0493 4.84154L4.06789 13.8229L1.70436 14.2956L2.17707 11.9321Z"
+                                                fill="#CB11AB" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M13.9948 5.78715L10.2132 2.00552L11.6313 0.587402C12.4145 -0.195801 13.6843 -0.195801 14.4675 0.587402L15.4129 1.53281C16.1961 2.31601 16.1961 3.58584 15.4129 4.36904L13.9948 5.78715ZM14.4675 3.42363C14.7286 3.16256 14.7286 2.73929 14.4675 2.47822L13.5221 1.53281C13.261 1.27174 12.8378 1.27174 12.5767 1.53281L12.104 2.00552L13.9948 3.89634L14.4675 3.42363Z"
+                                                fill="#CB11AB" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <span class="order_delivery-address text">
+                                    Бишкек, улица Ахматбека Суюмбаева, 12/1
+                                </span>
+                                <div>
+                                    <button class="order_delivery-dates">
+                                        <span class="order_delivery-date text">5–8 фев</span>
+                                    </button>
+                                </div>
+                                <div class="order_info">
+                                    <span class="order_info-icon"></span>
+                                    <p class="order_info-text text">Обратная доставка товаров на склад при отказе — 
+                                        <span class="order_info-green">бесплатно</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="order_payment">
+                                <div class="order_payment-wrap">
+                                    <span class="order_payment-title">Оплата картой</span>
+                                    <button class="order_payment_change">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M11.1585 1.05991L14.9401 4.84154L4.72705 15.0546L0.735435 15.8529C0.385575 15.9229 0.0771149 15.6144 0.147087 15.2646L0.94541 11.273L11.1585 1.05991ZM2.17707 11.9321L11.1585 2.95072L13.0493 4.84154L4.06789 13.8229L1.70436 14.2956L2.17707 11.9321Z"
+                                                fill="#CB11AB" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M13.9948 5.78715L10.2132 2.00552L11.6313 0.587402C12.4145 -0.195801 13.6843 -0.195801 14.4675 0.587402L15.4129 1.53281C16.1961 2.31601 16.1961 3.58584 15.4129 4.36904L13.9948 5.78715ZM14.4675 3.42363C14.7286 3.16256 14.7286 2.73929 14.4675 2.47822L13.5221 1.53281C13.261 1.27174 12.8378 1.27174 12.5767 1.53281L12.104 2.00552L13.9948 3.89634L14.4675 3.42363Z"
+                                                fill="#CB11AB" />
+                                        </svg>
+                                    </button>
+                                </div>
+                                <div class="order_payment-card card">
+                                    <span class="card_icon"></span>
+                                    <span class="card_number">1234 56•• •••• 1234</span>
+                                    <span class="card_date">01/30</span>
+                                </div>
+                                <div class="order_payment-checkbox">
+                                    <div class="checkbox">
+                                        <input class="checkbox_input visually-hidden" type="checkbox"
+                                            id="payment-immediately" name="select_all" checked>
+                                        <label class="checkbox_item" for="payment-immediately">Списать оплату
+                                            сразу</label>
+                                    </div>
+                                    <span class="order_payment-text">Спишем оплату с карты при получении</span>
+                                </div>
+                                <div class="order_button-wrap">
+                                    <button class="order_button" type="button">Заказать</button>
+                                </div>
+                            </div>
+                            <p class="order_access text">Соглашаюсь <a class="order_access-link" href=""> с правилами пользования торговой площадкой</a> и 
+                                <a class="order_access-link" href="">возврата</a>
+                            </p>
+                        </div>
                     </section>
                 </aside>
             </div>
