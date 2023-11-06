@@ -108,6 +108,7 @@
                         </div>
                         <ul class="cart_list">
                             <li class="cart_item">
+                                <span class="cart_item-count">56</span>
                                 <label class="checkbox_item cart_item-label">
                                     <input class="checkbox_input visually-hidden" type="checkbox">
                                     <span class="checkbox_icon"></span>
@@ -124,7 +125,9 @@
                                             </a>
                                             <div class="good_description">
                                                 <span class="good_description-item">Цвет: белый</span>
-                                                <span class="good_description-item">Размер: 56</span>
+                                                <span
+                                                    class="good_description-item good_description-item--mobile">Размер:
+                                                    56</span>
                                             </div>
                                             <div class="good_store">
                                                 <div class="good_store-wrap">
@@ -132,7 +135,7 @@
                                                     <span
                                                         class="good_store-item good_store-item--i visually-hidden">i</span>
                                                 </div>
-                                                <div class="good_store-wrap">
+                                                <div class="good_store-wrap good_store-wrap--two">
                                                     <span class="good_store-item">OOO Вайлдберриз</span>
                                                     <span class="good_store-item good_store-item--i">i</span>
                                                 </div>
@@ -148,7 +151,7 @@
                                                 </div>
                                                 <input class="counter_input" type="number" value="1" maxlength="3"
                                                     aria-label="Количество" inputmode="numeric" pattern="[0-9]*">
-                                                <div class="counter_wrap counter_wrap--minus">
+                                                <div class="counter_wrap counter_wrap--plus">
                                                     <button class="counter_btn counter_btn--plus"
                                                         type="button"></button>
                                                 </div>
@@ -195,6 +198,7 @@
                             </li>
 
                             <li class="cart_item">
+                                <span class="cart_item-count visually-hidden"></span>
                                 <label class="checkbox_item cart_item-label">
                                     <input class="checkbox_input visually-hidden" type="checkbox">
                                     <span class="checkbox_icon"></span>
@@ -220,7 +224,7 @@
                                                     <span
                                                         class="good_store-item good_store-item--i visually-hidden">i</span>
                                                 </div>
-                                                <div class="good_store-wrap">
+                                                <div class="good_store-wrap good_store-wrap--two">
                                                     <span class="good_store-item">OOO Мегапрофстиль</span>
                                                     <span class="good_store-item good_store-item--i">i</span>
                                                 </div>
@@ -236,7 +240,7 @@
                                                 </div>
                                                 <input class="counter_input" type="number" value="200" maxlength="3"
                                                     aria-label="Количество" inputmode="numeric" pattern="[0-9]*">
-                                                <div class="counter_wrap counter_wrap--minus">
+                                                <div class="counter_wrap counter_wrap--plus">
                                                     <button class="counter_btn counter_btn--plus"
                                                         type="button"></button>
                                                 </div>
@@ -272,7 +276,7 @@
 
                                         </div>
                                         <div class="good_price">
-                                            <span class="good_price-item good_price-item--large">2 100 047&nbsp;
+                                            <span class="good_price-item good_price-item--large">2 100 047
                                                 <span class="good_price-currency">сом</span>
                                             </span>
                                             <div class="good_price-wrap">
@@ -284,6 +288,7 @@
                             </li>
 
                             <li class="cart_item">
+                                <span class="cart_item-count visually-hidden"></span>
                                 <label class="checkbox_item cart_item-label">
                                     <input class="checkbox_input visually-hidden" type="checkbox">
                                     <span class="checkbox_icon"></span>
@@ -309,7 +314,7 @@
                                                     <span
                                                         class="good_store-item good_store-item--i visually-hidden">i</span>
                                                 </div>
-                                                <div class="good_store-wrap">
+                                                <div class="good_store-wrap good_store-wrap--two">
                                                     <span class="good_store-item">OOO Вайлдберриз</span>
                                                     <span class="good_store-item good_store-item--i">i</span>
                                                 </div>
@@ -325,7 +330,7 @@
                                                 </div>
                                                 <input class="counter_input" type="number" value="2" maxlength="3"
                                                     aria-label="Количество" inputmode="numeric" pattern="[0-9]*">
-                                                <div class="counter_wrap counter_wrap--minus">
+                                                <div class="counter_wrap counter_wrap--plus">
                                                     <button class="counter_btn counter_btn--plus disabled"
                                                         type="button"></button>
                                                 </div>
@@ -375,7 +380,7 @@
 
                     <section class="cart cart--off">
                         <h2 class="cart_title visually-hidden">Товары не в наличие</h2>
-                        <div class="cart_all-selected">
+                        <div class="cart_all-selected cart_all-selected--off">
                             <h3 class="cart_subtitle">Отсутствуют <span>· 3 </span>товара</h3>
                             <div class="cart_all-selected-toggle checkbox visually-hidden">
                                 <input class="checkbox_input visually-hidden" type="checkbox" id="all" name="select_all"
@@ -393,8 +398,9 @@
                                 </button>
                             </div>
                         </div>
-                        <ul class="cart_list">
+                        <ul class="cart_list cart_list--off">
                             <li class="cart_item cart_item--off">
+                                <span class="cart_item-count">56</span>
                                 <label class="checkbox_item cart_item-label visually-hidden">
                                     <input class="checkbox_input visually-hidden" type="checkbox">
                                     <span class="checkbox_icon"></span>
@@ -405,13 +411,15 @@
                                             <img class="good_img good_img--off" src="./images/good-one.png" width="72"
                                                 height="96" alt="Изображение футболка UZcotton мужская">
                                         </a>
-                                        <div class="good_info">
+                                        <div class="good_info good_info--off">
                                             <a class="good_name" href="#">
                                                 <span>Футболка UZcotton мужская</span>
                                             </a>
                                             <div class="good_description">
                                                 <span class="good_description-item">Цвет: белый</span>
-                                                <span class="good_description-item">Размер: 56</span>
+                                                <span
+                                                    class="good_description-item good_description-item--mobile">Размер:
+                                                    56</span>
                                             </div>
                                             <div class="good_store visually-hidden">
                                                 <div class="good_store-wrap">
@@ -427,7 +435,7 @@
                                         </div>
                                     </div>
                                     <div class="good_content good_content--counter good_content--off">
-                                        <div class="good_count">
+                                        <div class="good_count good_count--off">
                                             <div class="good_count-number counter visually-hidden">
                                                 <div class="counter_wrap">
                                                     <button class="counter_btn counter_btn--minus disabled"
@@ -435,7 +443,7 @@
                                                 </div>
                                                 <input class="counter_input" type="number" value="1" maxlength="3"
                                                     aria-label="Количество" inputmode="numeric" pattern="[0-9]*">
-                                                <div class="counter_wrap counter_wrap--minus">
+                                                <div class="counter_wrap counter_wrap--plus">
                                                     <button class="counter_btn counter_btn--plus"
                                                         type="button"></button>
                                                 </div>
@@ -482,6 +490,7 @@
                             </li>
 
                             <li class="cart_item cart_item--off">
+                                <span class="cart_item-count visually-hidden"></span>
                                 <label class="checkbox_item cart_item-label visually-hidden">
                                     <input class="checkbox_input visually-hidden" type="checkbox">
                                     <span class="checkbox_icon"></span>
@@ -492,7 +501,7 @@
                                             <img class="good_img good_img--off" src="./images/good-two.png" width="72"
                                                 height="96" alt="Изображение cиликоновый чехол">
                                         </a>
-                                        <div class="good_info">
+                                        <div class="good_info good_info--off">
                                             <a class="good_name" href="#">
                                                 <span>Силиконовый чехол картхолдер (отверстия) для карт, прозрачный кейс
                                                     бампер на Apple iPhone XR, MobiSafe</span>
@@ -515,10 +524,10 @@
                                         </div>
                                     </div>
                                     <div class="good_content good_content--counter good_content--off">
-                                        <div class="good_count">
+                                        <div class="good_count good_count--off">
                                             <div class="good_count-number counter visually-hidden">
                                                 <div class="counter_wrap">
-                                                    <button class="counter_btn counter_btn--minus disabled"
+                                                    <button class="counter_btn counter_btn--plus disabled"
                                                         type="button"></button>
                                                 </div>
                                                 <input class="counter_input" type="number" value="200" maxlength="3"
@@ -571,6 +580,7 @@
                             </li>
 
                             <li class="cart_item cart_item--off">
+                                <span class="cart_item-count">56/54/52/50/48</span>
                                 <label class="checkbox_item cart_item-label visually-hidden">
                                     <input class="checkbox_input visually-hidden" type="checkbox">
                                     <span class="checkbox_icon"></span>
@@ -581,7 +591,7 @@
                                             <img class="good_img good_img--off" src="./images/good-three.png" width="72"
                                                 height="96" alt="Изображение футболка UZcotton мужская">
                                         </a>
-                                        <div class="good_info">
+                                        <div class="good_info good_info--off">
                                             <a class="good_name" href="#">
                                                 <span>Карандаши цветные Faber-Castell "Замок", набор 24 цвета,
                                                     заточенные, шестигранные, Faber-Castell</span>
@@ -604,7 +614,7 @@
                                         </div>
                                     </div>
                                     <div class="good_content good_content--counter good_content--off">
-                                        <div class="good_count">
+                                        <div class="good_count good_count--off">
                                             <div class="good_count-number counter visually-hidden">
                                                 <div class="counter_wrap">
                                                     <button class="counter_btn counter_btn--minus disabled"
@@ -612,7 +622,7 @@
                                                 </div>
                                                 <input class="counter_input" type="number" value="2" maxlength="3"
                                                     aria-label="Количество" inputmode="numeric" pattern="[0-9]*">
-                                                <div class="counter_wrap counter_wrap--minus">
+                                                <div class="counter_wrap counter_wrap--plus">
                                                     <button class="counter_btn counter_btn--plus disabled"
                                                         type="button"></button>
                                                 </div>
@@ -768,26 +778,32 @@
                             <h2 class="contacts_title title">Получатель</h2>
                             <div class="contacts_content">
                                 <form class="contacts_form form" action="" method="post">
-                                    <div class="form_item form_item--top">
-                                        <label class="form_label" for="">Имя</label>
-                                        <input class="form_input" type="text" placeholder="Имя">
+                                    <div class="form_row">
+                                        <div class="form_item">
+                                            <label class="form_label" for="">Имя</label>
+                                            <input class="form_input" type="text" placeholder="Имя">
+                                        </div>
+                                        <div class="form_item">
+                                            <label class="form_label" for="">Фамилия</label>
+                                            <input class="form_input" type="text" placeholder="Фамилия">
+                                        </div>
                                     </div>
-                                    <div class="form_item form_item--top">
-                                        <label class="form_label" for="">Фамилия</label>
-                                        <input class="form_input" type="text" placeholder="Фамилия">
-                                    </div>
-                                    <div class="form_item">
-                                        <label class="form_label" for="">Почта</label>
-                                        <input class="form_input" type="email" imputmode="email" placeholder="Почта">
-                                    </div>
-                                    <div class="form_item">
-                                        <label class="form_label form_label--active" for="">Телефон</label>
-                                        <input class="form_input" type="tel" inputmode="numeric" placeholder="Телефон">
-                                    </div>
-                                    <div class="form_item">
-                                        <label class="form_label" for="">ИНН</label>
-                                        <input class="form_input" type="text" placeholder="ИНН">
-                                        <span class="form_item-notification">Для таможенного оформления</span>
+                                    <div class="form_row">
+                                        <div class="form_item">
+                                            <label class="form_label" for="">Почта</label>
+                                            <input class="form_input form_input--email" type="email" imputmode="email"
+                                                placeholder="Почта">
+                                        </div>
+                                        <div class="form_item">
+                                            <label class="form_label form_label--active" for="">Телефон</label>
+                                            <input class="form_input" type="tel" inputmode="numeric"
+                                                placeholder="Телефон">
+                                        </div>
+                                        <div class="form_item">
+                                            <label class="form_label" for="">ИНН</label>
+                                            <input class="form_input" type="text" placeholder="ИНН">
+                                            <span class="form_item-notification">Для таможенного оформления</span>
+                                        </div>
                                     </div>
                                 </form>
                             </div>
@@ -801,7 +817,8 @@
                             <div class="order_description">
                                 <div class="order_description-item order_description-item--total">
                                     <span class="order_description-label order_description-label--total">Итого</span>
-                                    <span class="order_description-price order_description-price--total">2 101 063
+                                    <span
+                                        class="order_description-price order_description-price--total">2&nbsp;101&nbsp;063
                                         сом</span>
                                 </div>
                                 <div class="order_description-item">
@@ -835,14 +852,14 @@
                                 <span class="order_delivery-address text">
                                     Бишкек, улица Ахматбека Суюмбаева, 12/1
                                 </span>
-                                <div>
+                                <div class="order_delivery-times">
                                     <button class="order_delivery-dates">
                                         <span class="order_delivery-date text">5–8 фев</span>
                                     </button>
                                 </div>
-                                <div class="order_info">
+                                <div class="order_info grey">
                                     <span class="order_info-icon"></span>
-                                    <p class="order_info-text text">Обратная доставка товаров на склад при отказе — 
+                                    <p class="order_info-text text">Обратная доставка товаров на склад при отказе —
                                         <span class="order_info-green">бесплатно</span>
                                     </p>
                                 </div>
@@ -863,24 +880,25 @@
                                     </button>
                                 </div>
                                 <div class="order_payment-card card">
-                                    <span class="card_icon"></span>
-                                    <span class="card_number">1234 56•• •••• 1234</span>
-                                    <span class="card_date">01/30</span>
+                                    <span class="card_icon card_icon--small"></span>
+                                    <span class="card_number text">1234 12•• •••• 1234</span>
+                                    <span class="card_date  visually-hidden">01/30</span>
                                 </div>
-                                <div class="order_payment-checkbox">
+                                <div class="order_payment-checkbox grey">
                                     <div class="checkbox">
                                         <input class="checkbox_input visually-hidden" type="checkbox"
                                             id="payment-immediately" name="select_all" checked>
-                                        <label class="checkbox_item" for="payment-immediately">Списать оплату
-                                            сразу</label>
+                                        <label class="checkbox_item order_checkbox" for="payment-immediately">
+                                            Списать оплату сразу</label>
                                     </div>
-                                    <span class="order_payment-text">Спишем оплату с карты при получении</span>
+                                    <span class="order_payment-text text">Спишем оплату с карты при получении</span>
                                 </div>
                                 <div class="order_button-wrap">
                                     <button class="order_button" type="button">Заказать</button>
                                 </div>
                             </div>
-                            <p class="order_access text">Соглашаюсь <a class="order_access-link" href=""> с правилами пользования торговой площадкой</a> и 
+                            <p class="order_access text">Соглашаюсь <a class="order_access-link" href=""> с правилами
+                                    пользования торговой площадкой</a> и
                                 <a class="order_access-link" href="">возврата</a>
                             </p>
                         </div>
@@ -889,8 +907,25 @@
             </div>
         </div>
     </main>
-    <footer>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer_wrapper">
+                <p class="footer_text text">© 2022 ООО «Товары и точка»</p>
+            </div>
+        </div>
+        <div class="footer_nav footer-menu">
+            <div class="container">
+                <div class="footer-menu_wrap">
+                    <ul>
+                        <li>
+                            <a href="#">
 
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </footer>
 </body>
 
