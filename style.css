@@ -379,7 +379,7 @@ button {
 }
 
 .closed {
-  font-size: 0;
+  height: 0;
 }
 
 .cart_all-selected {
