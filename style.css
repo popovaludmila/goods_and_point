@@ -125,13 +125,6 @@ button {
   padding: 0 24px;
 }
 
-.disabled {
-  color: #9797af;
-}
-.none {
-  display: none;
-}
-
 .header {
   max-width: 1400px;
   margin: 0 auto;
@@ -385,12 +378,21 @@ button {
   color: #000000;
 }
 
+.closed {
+  font-size: 0;
+}
+
 .cart_all-selected {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   padding-bottom: 18px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.cart_all-selected--off {
+  border-bottom: none;
 }
 
 .checkbox {
@@ -450,6 +452,12 @@ button {
   padding: 0;
   margin-top: 2px;
   margin-right: 2px;
+  transition: 0.5s ;
+}
+
+.accordion_button--rotate {
+  transform: rotate(180deg);
+
 }
 
 .cart_list {
@@ -457,9 +465,23 @@ button {
   flex-direction: column;
   flex-wrap: wrap;
   width: 100%;
+  max-height: 100%;
   padding-top: 11px;
   padding-bottom: 7px;
+  overflow: visible;
+  opacity: 1;
+  transition: opacity 0s, all .1s;
+}
+
+.cart_list--off {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
+
+}
+
+.cart_list--close {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
 }
 
 .cart_item {
@@ -712,6 +734,11 @@ button {
   border-radius: 0 8px 8px 0;
 }
 
+.disabled {
+  color: #9797af;
+}
+
+
 .counter_input {
   min-width: 44px;
   height: 100%;
@@ -818,7 +845,7 @@ button {
   display: flex;
   flex-direction: column;
   position: absolute;
-right: 0;
+  right: 0;
   top: 0;
   background-color: #ffffff;
   width: 239px;
@@ -851,7 +878,7 @@ right: 0;
 }
 
 .tooltip-price_sale {
-  color: #A0A0A4;
+  color: #a0a0a4;
 }
 
 .good_price-total:hover .tooltip-price,
@@ -1521,6 +1548,10 @@ right: 0;
 }
 
 .footer_nav {
+  display: none;
+}
+
+.none {
   display: none;
 }
 

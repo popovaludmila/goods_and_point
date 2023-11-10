@@ -86,13 +86,15 @@
             <div class="main_wrapper">
                 <div class="main_left">
 
-                    <section class="cart">
+                    <section class="cart cart--on">
                         <h2 class="cart_title">Корзина</h2>
                         <div class="cart_all-selected">
-                            <h3 class="cart_subtitle visually-hidden"></h3>
-                            <div class="cart_all-selected-toggle checkbox">
-                                <input class="checkbox_input visually-hidden" type="checkbox" id="all" name="select_all"
-                                    checked>
+                            <h3 class="cart_subtitle cart_subtitle--on visually-hidden title_opened"> <span
+                                    class="cart_total-count">266 </span>товаров <span class="cart_total-pricd">· 2 100
+                                    569 </span>сом </h3>
+                            <div class="cart_all-selected-toggle checkbox checkbox_closed">
+                                <input class="checkbox_input visually-hidden" type="checkbox" id="all"
+                                    name="select_all">
                                 <label class="checkbox_item" for="all">Выбрать все</label>
                             </div>
                             <div class="cart_accordion accordion">
@@ -106,7 +108,7 @@
                                 </button>
                             </div>
                         </div>
-                        <ul class="cart_list">
+                        <ul class="cart_list cart_list--on">
                             <li class="cart_item">
                                 <span class="cart_item-count">56</span>
                                 <label class="checkbox_item cart_item-label">
@@ -154,13 +156,14 @@
                                         <div class="good_count">
                                             <div class="good_count-number counter">
                                                 <div class="counter_wrap">
-                                                    <button class="counter_btn counter_btn--minus disabled"
-                                                        type="button"></button>
+                                                    <button class="counter_btn counter_btn--minus btn-minus-js disabled"
+                                                        type="button" disabled></button>
                                                 </div>
                                                 <input class="counter_input" type="number" value="1" maxlength="3"
-                                                    aria-label="Количество" inputmode="numeric" pattern="[0-9]*">
+                                                    aria-label="Количество" inputmode="numeric" pattern="[0-9]*"
+                                                    data-price="1051">
                                                 <div class="counter_wrap counter_wrap--plus">
-                                                    <button class="counter_btn counter_btn--plus"
+                                                    <button class="counter_btn counter_btn--plus btn-plus-js"
                                                         type="button"></button>
                                                 </div>
                                             </div>
@@ -195,18 +198,19 @@
 
                                         </div>
                                         <div class="good_price">
-                                            <span class="good_price-item">522 <span
-                                                    class="good_price-currency">сом</span> </span>
+                                            <span class="good_price-item item-price-js">522
+                                                <span class="good_price-currency">сом</span> </span>
                                             <div class="good_price-wrap">
-                                                <div class="good_price-total">1051 сом
+                                                <div class="good_price-total item-total-price-js">1051 сом
                                                     <div class="tooltip-price">
                                                         <p class="tooltip-price_text">
                                                             <span class="tooltip-price_sale">Скидка 55%</span>
-                                                            <span class="tooltip-price_number">−300 сом</span>
+                                                            <span class="tooltip-price_number discount-js">−300 сом</span>
                                                         </p>
                                                         <p class="tooltip-price_text">
-                                                            <span class="tooltip-price_sale">Скидка покупателя 10%</span>
-                                                            <span class="tooltip-nummber">−30 сом</span>
+                                                            <span class="tooltip-price_sale">Скидка покупателя
+                                                                10%</span>
+                                                            <span class="tooltip-nummber bayer-discount-js">−30 сом</span>
                                                         </p>
                                                     </div>
                                                 </div>
@@ -235,7 +239,7 @@
                                             </a>
                                             <div class="good_description">
                                                 <span class="good_description-item">Цвет: прозрачный</span>
-                                                <span class="good_description-item visually-hidden"></span>
+                                                <span class="good_description-item none"></span>
                                             </div>
                                             <div class="good_store">
                                                 <div class="good_store-wrap">
@@ -263,18 +267,19 @@
                                         <div class="good_count">
                                             <div class="good_count-number counter">
                                                 <div class="counter_wrap">
-                                                    <button class="counter_btn counter_btn--minus disabled"
+                                                    <button class="counter_btn counter_btn--minus btn-minus-js disabled"
                                                         type="button"></button>
                                                 </div>
                                                 <input class="counter_input" type="number" value="200" maxlength="3"
-                                                    aria-label="Количество" inputmode="numeric" pattern="[0-9]*">
+                                                    aria-label="Количество" inputmode="numeric" pattern="[0-9]*"
+                                                    data-price="11500.235">
                                                 <div class="counter_wrap counter_wrap--plus">
-                                                    <button class="counter_btn counter_btn--plus"
+                                                    <button class="counter_btn counter_btn--plus btn-plus-js"
                                                         type="button"></button>
                                                 </div>
                                             </div>
                                             <span class="good_count-balance visually-hidden">Осталось <span
-                                                    class="balance_count">2</span> шт.</span>
+                                                    class="balance_count"></span> шт.</span>
                                             <div class="good_count-button btn">
                                                 <button class="btn_action btn_action--like" type="button">
                                                     <svg width="20" height="16" viewBox="0 0 20 16" fill="none"
@@ -304,19 +309,20 @@
 
                                         </div>
                                         <div class="good_price">
-                                            <span class="good_price-item good_price-item--large">2 100 047
+                                            <span class="good_price-item item-price-js">2 100 047
                                                 <span class="good_price-currency">сом</span>
                                             </span>
                                             <div class="good_price-wrap">
-                                                <div class="good_price-total">2 300 047 сом
+                                                <div class="good_price-total item-total-price-js">2 300 047 сом
                                                     <div class="tooltip-price">
                                                         <p class="tooltip-price_text">
                                                             <span class="tooltip-price_sale">Скидка 55%</span>
-                                                            <span class="tooltip-price_number">−300 сом</span>
+                                                            <span class="tooltip-price_number discount-js">−300 сом</span>
                                                         </p>
                                                         <p class="tooltip-price_text">
-                                                            <span class="tooltip-price_sale">Скидка покупателя 10%</span>
-                                                            <span class="tooltip-nummber">−30 сом</span>
+                                                            <span class="tooltip-price_sale">Скидка покупателя
+                                                                10%</span>
+                                                            <span class="tooltip-nummber bayer-discount-js">−30 сом</span>
                                                         </p>
                                                     </div>
                                                 </div>
@@ -343,7 +349,7 @@
                                                 <span>Карандаши цветные Faber-Castell "Замок", набор 24 цвета,
                                                     заточенные, шестигранные, Faber-Castell</span>
                                             </a>
-                                            <div class="good_description visually-hidden">
+                                            <div class="good_description none">
                                                 <span class="good_description-item"></span>
                                                 <span class="good_description-item"></span>
                                             </div>
@@ -356,8 +362,11 @@
                                                     <div class="good_store-item good_store-item--i">i
                                                         <div class="tooptip-text">
                                                             <span class="tooptip-text_title">OOO "Вайлдберриз"</span>
-                                                            <span class="tooptip-text_subtitle"> ОГРН: 1067746062449</span>
-                                                            <span class="tooptip-text_subtitle">142181, Московская область, д Коледино, тер. Индустриальный Парк Коледино, д. 6 стр. 1</span>
+                                                            <span class="tooptip-text_subtitle"> ОГРН:
+                                                                1067746062449</span>
+                                                            <span class="tooptip-text_subtitle">142181, Московская
+                                                                область, д Коледино, тер. Индустриальный Парк Коледино,
+                                                                д. 6 стр. 1</span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -368,13 +377,14 @@
                                         <div class="good_count">
                                             <div class="good_count-number counter">
                                                 <div class="counter_wrap">
-                                                    <button class="counter_btn counter_btn--minus disabled"
+                                                    <button class="counter_btn counter_btn--minus btn-minus-js disabled"
                                                         type="button"></button>
                                                 </div>
                                                 <input class="counter_input" type="number" value="2" maxlength="3"
-                                                    aria-label="Количество" inputmode="numeric" pattern="[0-9]*">
+                                                    aria-label="Количество" inputmode="numeric" pattern="[0-9]*"
+                                                    data-price="475">
                                                 <div class="counter_wrap counter_wrap--plus">
-                                                    <button class="counter_btn counter_btn--plus disabled"
+                                                    <button class="counter_btn counter_btn--plus btn-plus-js disabled"
                                                         type="button"></button>
                                                 </div>
                                             </div>
@@ -409,18 +419,19 @@
 
                                         </div>
                                         <div class="good_price">
-                                            <span class="good_price-item">494 <span
+                                            <span class="good_price-item item-price-js">494 <span
                                                     class="good_price-currency">сом</span> </span>
                                             <div class="good_price-wrap">
-                                                <div class="good_price-total">950 сом
+                                                <div class="good_price-total item-total-price-js">950 сом
                                                     <div class="tooltip-price">
                                                         <p class="tooltip-price_text">
                                                             <span class="tooltip-price_sale">Скидка 55%</span>
-                                                            <span class="tooltip-price_number">−300 сом</span>
+                                                            <span class="tooltip-price_number discount-js">−300 сом</span>
                                                         </p>
                                                         <p class="tooltip-price_text">
-                                                            <span class="tooltip-price_sale">Скидка покупателя 10%</span>
-                                                            <span class="tooltip-nummber">−30 сом</span>
+                                                            <span class="tooltip-price_sale">Скидка покупателя
+                                                                10%</span>
+                                                            <span class="tooltip-nummber bayer-discount-js">−30 сом</span>
                                                         </p>
                                                     </div>
                                                 </div>
@@ -436,11 +447,6 @@
                         <h2 class="cart_title visually-hidden">Товары не в наличие</h2>
                         <div class="cart_all-selected cart_all-selected--off">
                             <h3 class="cart_subtitle">Отсутствуют <span>· 3 </span>товара</h3>
-                            <div class="cart_all-selected-toggle checkbox visually-hidden">
-                                <input class="checkbox_input visually-hidden" type="checkbox" id="all" name="select_all"
-                                    checked>
-                                <label class="checkbox_item" for="all">Выбрать все</label>
-                            </div>
                             <div class="cart_accordion accordion">
                                 <button class="accordion_button" type="button">
                                     <svg class="accordion_icon" width="16" height="10" viewBox="0 0 16 10" fill="none"
@@ -455,7 +461,7 @@
                         <ul class="cart_list cart_list--off">
                             <li class="cart_item cart_item--off">
                                 <span class="cart_item-count">56</span>
-                                <label class="checkbox_item cart_item-label visually-hidden">
+                                <label class="checkbox_item cart_item-label none">
                                     <input class="checkbox_input visually-hidden" type="checkbox">
                                     <span class="checkbox_icon"></span>
                                 </label>
@@ -475,11 +481,10 @@
                                                     class="good_description-item good_description-item--mobile">Размер:
                                                     56</span>
                                             </div>
-                                            <div class="good_store visually-hidden">
+                                            <div class="good_store none">
                                                 <div class="good_store-wrap">
                                                     <span class="good_store-item">Коледино WB</span>
-                                                    <span
-                                                        class="good_store-item good_store-item--i visually-hidden">i</span>
+                                                    <span class="good_store-item good_store-item--i">i</span>
                                                 </div>
                                                 <div class="good_store-wrap">
                                                     <span class="good_store-item">OOO Вайлдберриз</span>
@@ -493,20 +498,6 @@
                                     </div>
                                     <div class="good_content good_content--counter good_content--off">
                                         <div class="good_count good_count--off">
-                                            <div class="good_count-number counter visually-hidden">
-                                                <div class="counter_wrap">
-                                                    <button class="counter_btn counter_btn--minus disabled"
-                                                        type="button"></button>
-                                                </div>
-                                                <input class="counter_input" type="number" value="1" maxlength="3"
-                                                    aria-label="Количество" inputmode="numeric" pattern="[0-9]*">
-                                                <div class="counter_wrap counter_wrap--plus">
-                                                    <button class="counter_btn counter_btn--plus"
-                                                        type="button"></button>
-                                                </div>
-                                            </div>
-                                            <span class="good_count-balance visually-hidden">Осталось <span
-                                                    class="balance_count">2</span> шт.</span>
                                             <div class="good_count-button btn good_count-button--off">
                                                 <button class="btn_action btn_action--like" type="button">
                                                     <svg width="20" height="16" viewBox="0 0 20 16" fill="none"
@@ -534,13 +525,6 @@
                                                 </button>
                                             </div>
 
-                                        </div>
-                                        <div class="good_price visually-hidden">
-                                            <span class="good_price-item">522 <span
-                                                    class="good_price-currency">сом</span> </span>
-                                            <div class="good_price-wrap">
-                                                <span class="good_price-total">1051 сом</span>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -582,20 +566,6 @@
                                     </div>
                                     <div class="good_content good_content--counter good_content--off">
                                         <div class="good_count good_count--off">
-                                            <div class="good_count-number counter visually-hidden">
-                                                <div class="counter_wrap">
-                                                    <button class="counter_btn counter_btn--plus disabled"
-                                                        type="button"></button>
-                                                </div>
-                                                <input class="counter_input" type="number" value="200" maxlength="3"
-                                                    aria-label="Количество" inputmode="numeric" pattern="[0-9]*">
-                                                <div class="counter_wrap counter_wrap--minus">
-                                                    <button class="counter_btn counter_btn--plus"
-                                                        type="button"></button>
-                                                </div>
-                                            </div>
-                                            <span class="good_count-balance visually-hidden">Осталось <span
-                                                    class="balance_count">2</span> шт.</span>
                                             <div class="good_count-button btn good_count-button--off">
                                                 <button class="btn_action btn_action--like" type="button">
                                                     <svg width="20" height="16" viewBox="0 0 20 16" fill="none"
@@ -621,15 +591,6 @@
                                                     </svg>
                                                     <span>Удалить</span>
                                                 </button>
-                                            </div>
-
-                                        </div>
-                                        <div class="good_price visually-hidden">
-                                            <span class="good_price-item good_price-item--large">2 100 047&nbsp;
-                                                <span class="good_price-currency">сом</span>
-                                            </span>
-                                            <div class="good_price-wrap">
-                                                <span class="good_price-total">2 300 047 сом</span>
                                             </div>
                                         </div>
                                     </div>
@@ -672,20 +633,6 @@
                                     </div>
                                     <div class="good_content good_content--counter good_content--off">
                                         <div class="good_count good_count--off">
-                                            <div class="good_count-number counter visually-hidden">
-                                                <div class="counter_wrap">
-                                                    <button class="counter_btn counter_btn--minus disabled"
-                                                        type="button"></button>
-                                                </div>
-                                                <input class="counter_input" type="number" value="2" maxlength="3"
-                                                    aria-label="Количество" inputmode="numeric" pattern="[0-9]*">
-                                                <div class="counter_wrap counter_wrap--plus">
-                                                    <button class="counter_btn counter_btn--plus disabled"
-                                                        type="button"></button>
-                                                </div>
-                                            </div>
-                                            <span class="good_count-balance visually-hidden">Осталось <span
-                                                    class="balance_count">2</span> шт.</span>
                                             <div class="good_count-button btn good_count-button--off">
                                                 <button class="btn_action btn_action--like" type="button">
                                                     <svg width="20" height="16" viewBox="0 0 20 16" fill="none"
@@ -711,14 +658,6 @@
                                                     </svg>
                                                     <span>Удалить</span>
                                                 </button>
-                                            </div>
-
-                                        </div>
-                                        <div class="good_price visually-hidden">
-                                            <span class="good_price-item">494 <span
-                                                    class="good_price-currency">сом</span> </span>
-                                            <div class="good_price-wrap">
-                                                <span class="good_price-total">950 сом</span>
                                             </div>
                                         </div>
                                     </div>
@@ -838,28 +777,29 @@
                                 <form class="contacts_form form" action="" method="post">
                                     <div class="form_row">
                                         <div class="form_item">
-                                            <label class="form_label" for="">Имя</label>
-                                            <input class="form_input" type="text" placeholder="Имя">
+                                            <label class="form_label" for="input_name">Имя</label>
+                                            <input class="form_input" type="text" placeholder="Имя" id="input_name">
                                         </div>
                                         <div class="form_item">
-                                            <label class="form_label" for="">Фамилия</label>
-                                            <input class="form_input" type="text" placeholder="Фамилия">
+                                            <label class="form_label" for="input_surname">Фамилия</label>
+                                            <input class="form_input" type="text" id="input_surname"
+                                                placeholder="Фамилия">
                                         </div>
                                     </div>
                                     <div class="form_row">
                                         <div class="form_item">
-                                            <label class="form_label" for="">Почта</label>
-                                            <input class="form_input form_input--email" type="email" imputmode="email"
-                                                placeholder="Почта">
+                                            <label class="form_label" for="input_email">Почта</label>
+                                            <input class="form_input form_input--email" type="email" id="input_email"
+                                                imputmode="email" placeholder="Почта">
                                         </div>
                                         <div class="form_item">
-                                            <label class="form_label form_label--active" for="">Телефон</label>
-                                            <input class="form_input" type="tel" inputmode="numeric"
+                                            <label class="form_label form_label--active" for="input_tel">Телефон</label>
+                                            <input class="form_input" type="tel" id="input_tel" inputmode="numeric"
                                                 placeholder="Телефон">
                                         </div>
                                         <div class="form_item">
-                                            <label class="form_label" for="">ИНН</label>
-                                            <input class="form_input" type="text" placeholder="ИНН">
+                                            <label class="form_label" for="input_inn">ИНН</label>
+                                            <input class="form_input" type="text" id="input_inn" placeholder="ИНН">
                                             <span class="form_item-notification">Для таможенного оформления</span>
                                         </div>
                                     </div>
@@ -876,11 +816,11 @@
                                 <div class="order_description-item order_description-item--total">
                                     <span class="order_description-label order_description-label--total">Итого</span>
                                     <span
-                                        class="order_description-price order_description-price--total">2&nbsp;101&nbsp;063
+                                        class="order_description-price order_description-price--total total-price-js">2&nbsp;101&nbsp;063
                                         сом</span>
                                 </div>
                                 <div class="order_description-item">
-                                    <span class="order_description-label">203 товара</span>
+                                    <span class="order_description-label total-count-js">203 товара</span>
                                     <span class="order_description-price">2 302 048 сом</span>
                                 </div>
                                 <div class="order_description-item">
@@ -1063,6 +1003,7 @@
             </div>
         </div>
     </footer>
+    <script src="js/main.js" type="module"></script>
 </body>
 
 </html>
