@@ -1,43 +1,93 @@
 import { toggleAccordeon } from "./accordeon.js";
-import { getPluralWord, setNormalPrice, setPriceWithoutSpaces } from "./utils.js";
+import { getPluralWord, setNormalPrice, setPriceWithoutSpaces, setRandomId } from "./utils.js";
 
 document.addEventListener('DOMContentLoaded', () => {
     toggleAccordeon();
+
     const cartListElement = document.querySelector('.cart_list--on'); // список товаров в наличие
     const cartItemElement = cartListElement.querySelectorAll('.cart_item'); // товары
-    const countsElement = cartListElement.querySelectorAll('.counter_input'); // все инпуты
-    const pricesWithDiscountElement = cartListElement.querySelectorAll('.item-price-js');
     const totalPriceElement = document.querySelector('.total-price-js');
     const totalCountElement = document.querySelector('.total-count-js');
     const accordeonCountElement = document.querySelector('.accordeon-count-js');
-    console.log(accordeonCountElement.textContent)
     const accordeonPriceElement = document.querySelector('.accordeon-price-js');
+    const allSelectedElement = document.getElementById('all');
+    const checkboxesElement = cartListElement.querySelectorAll('.checkbox-js');
 
+    [...cartItemElement].forEach(item => {
+        return item.setAttribute('data-id', setRandomId());
+    });
 
-    const calculateTotalCount = () => {
+    const update = () => {
+        let totalPrice = 0;
         let totalCount = 0;
+        let price = 0;
+        let count = 0;
 
-        [...countsElement].forEach(count => {
-            totalCount += Number(count.value);
+        [...cartItemElement].forEach(cartItem => {
+            const cartItemChecked = cartItem.querySelector('.checkbox-js').checked;
+            const cartItemPrice = Number(setPriceWithoutSpaces(cartItem.querySelector('.item-price-js').textContent));
+            const cartItemCount = Number(cartItem.querySelector('.counter_input').value);
+
+            if (cartItemChecked) {
+                totalPrice += cartItemPrice;
+                totalCount += cartItemCount;
+            }
+
+            count += cartItemCount;
+            price += cartItemPrice;
         });
 
-        return`${setNormalPrice(totalCount)} ${getPluralWord(totalCount, 'товар', 'товара', 'товаров')}`;
+        totalCountElement.textContent = `${setNormalPrice(totalCount)} ${getPluralWord(totalCount, 'товар', 'товара', 'товаров')}`;;
+        totalPriceElement.textContent = `${setNormalPrice(totalPrice)} сом`;
+        accordeonCountElement.textContent = `${setNormalPrice(count)} ${getPluralWord(price, 'товар', 'товара', 'товаров')}`;
+        accordeonPriceElement.textContent = `${setNormalPrice(price)} сом`
     }
 
-    const calculateTotalPriceWithDiscount = () => {
-        let totalPrice = 0;
+    update();
 
-        [...pricesWithDiscountElement].forEach(price => {
-            totalPrice += Number(setPriceWithoutSpaces(price.textContent));
+    const selectGood = () => {
+        [...cartItemElement].forEach(good => {
+            const chexboxElement = good.querySelector('.checkbox-js');
+
+            chexboxElement.onclick = () => {
+
+                if (chexboxElement.checked) {
+                    chexboxElement.removeAttribute('checked');
+                    update();
+                    return;
+                } else {
+                    chexboxElement.setAttribute('checked', '');
+                    update();
+                    return;
+                }
+            }
         });
-
-        return `${setNormalPrice(totalPrice)} сом`;
     };
 
-    const selectCartItem = () => {
-        
+    selectGood();
+
+    const selectAllGoods = () => {
+        allSelectedElement.onclick = () => {
+            allSelectedElement.setAttribute('checked', '');
+            if (!allSelectedElement.checked) {
+                checkboxesElement.forEach(item => {
+                    item.setAttribute('checked', '');
+                });
+              
+                update();
+                return;
+            } else {
+                checkboxesElement.forEach(item => {
+                    item.removeAttribute('checked');
+                });
+                update();
+                return;
+            }
+
+        }
     }
 
+    selectAllGoods();
 
     const changeCount = () => {
         [...cartItemElement].forEach(good => {
@@ -50,7 +100,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const plusBtnElement = good.querySelector('.btn-plus-js'); // кнопка +
             const priceWithoutDiscountElement = good.querySelector('.item-total-price-js'); //стоимость без скидок
             const discountPriceElement = good.querySelector('.discount-js'); // скидка обычная
-
             const discountBayerPriceElement = good.querySelector('.bayer-discount-js'); // скидка продавца
 
             // Рассчет стоимости товара без скидки
@@ -84,7 +133,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 return `${setNormalPrice(total - totalDiscount)} сом`;
             };
 
-
             minusBtnElement.addEventListener('click', (evt) => {
                 evt.preventDefault();
 
@@ -94,6 +142,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (Number(inputCountElement.value) === 1) {
                     minusBtnElement.classList.add('disabled');
                     minusBtnElement.setAttribute('disabled', '');
+
+                    update();
+
                     return;
                 } else {
                     minusBtnElement.classList.remove('disabled');
@@ -112,11 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 checkPlaceNumber(goodPriceElement.textContent);
 
-                totalCountElement.textContent = calculateTotalCount();
-                totalPriceElement.textContent = calculateTotalPriceWithDiscount();
-                
-                accordeonCountElement.textContent = calculateTotalCount();
-                accordeonPriceElement.textContent = `· ${calculateTotalPriceWithDiscount()}`;
+                update();
             });
 
             plusBtnElement.addEventListener('click', (evt) => {
@@ -128,6 +175,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 if ((countBalanceElement.textContent !== '') && (Number(inputCountElement.value) === Number(countBalanceElement.textContent))) {
                     plusBtnElement.classList.add('disabled');
                     plusBtnElement.setAttribute('disabled', '');
+
+                    update();
                     return;
                 } else {
                     plusBtnElement.classList.remove('disabled');
@@ -145,14 +194,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 checkPlaceNumber(goodPriceElement.textContent);
 
-                totalCountElement.textContent = calculateTotalCount();
-                totalPriceElement.textContent = calculateTotalPriceWithDiscount();
-                
-                accordeonCountElement.textContent = calculateTotalCount();
-                accordeonPriceElement.textContent = `· ${calculateTotalPriceWithDiscount()}`;
+                update();
             });
         });
     };
     changeCount();
-   
+
 });
