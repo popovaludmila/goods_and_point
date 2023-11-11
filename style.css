@@ -408,6 +408,7 @@ button {
   line-height: 22px;
   color: #000000;
   padding-left: 33px;
+  cursor: pointer;
 }
 
 .checkbox_icon {
@@ -421,6 +422,7 @@ button {
   height: 22px;
   background-color: transparent;
   border-radius: 6px;
+  cursor: pointer;
 }
 
 .checkbox_icon::before,
@@ -438,6 +440,7 @@ button {
   top: 0;
   left: 0;
   content: "";
+  cursor: pointer;
 }
 
 .checkbox_input:checked + .checkbox_icon::before,
@@ -452,12 +455,11 @@ button {
   padding: 0;
   margin-top: 2px;
   margin-right: 2px;
-  transition: 0.5s ;
+  transition: 0.5s;
 }
 
 .accordion_button--rotate {
   transform: rotate(180deg);
-
 }
 
 .cart_list {
@@ -470,12 +472,11 @@ button {
   padding-bottom: 7px;
   overflow: visible;
   opacity: 1;
-  transition: opacity 0s, all .1s;
+  transition: opacity 0s, all 0.1s;
 }
 
 .cart_list--off {
   border-top: 1px solid rgba(0, 0, 0, 0.1);
-
 }
 
 .cart_list--close {
@@ -737,7 +738,6 @@ button {
 .disabled {
   color: #9797af;
 }
-
 
 .counter_input {
   min-width: 44px;
@@ -1216,6 +1216,20 @@ button {
   padding-left: 8px;
 }
 
+.address_row {
+  padding-left: 8px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+
+  color: #a0a0a4;
+}
+
+.address_modal {
+ display: none;
+}
+
 .date_list {
   display: flex;
   flex-direction: column;
@@ -1397,14 +1411,14 @@ button {
   padding-top: 16px;
 }
 
-.payment_card {
+.payment_card,
+.card {
   display: flex;
   flex-direction: row;
 }
 
 .payment_notification {
   padding-top: 8px;
-
   font-family: inherit;
   font-size: 13px;
   font-weight: 400;
@@ -1419,10 +1433,24 @@ button {
   border-radius: 4px;
   background-color: #f6f6fa;
   margin-right: 8px;
-  background-image: url("./images/card-mir.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+}
+
+.card_icon--mir {
+  background-image: url("./images/card-mir.svg");
+}
+
+.card_icon--visa {
+  background-image: url("./images/card-visa.svg");
+}
+
+.card_icon--mastercard {
+  background-image: url("./images/card-mastercard.svg");
+}
+.card_icon--maestro {
+  background-image: url("./images/card-maestro.svg");
 }
 
 .card_icon--small {
@@ -1553,6 +1581,225 @@ button {
 
 .none {
   display: none;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  padding-top: 100px;
+  overflow: auto;
+  background-color: rgba(5, 0, 10, 0.3);
+}
+
+.pay {
+  display: flex;
+  max-width: 400px;
+  min-height: 408px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+}
+
+.pay_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 24px;
+  padding-top: 16px;
+}
+
+.pay_top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+.pay_list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 13px;
+}
+
+.pay_item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-bottom: 16px;
+}
+
+.pay_item:last-child {
+  padding-bottom: 0;
+}
+
+.pay_label {
+  display: flex;
+  padding-left: 24px;
+}
+
+.del {
+  display: flex;
+  margin: 0 auto;
+  max-width: 500px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+  min-height: 408px;
+}
+
+.del_wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  padding-top: 16px;
+}
+
+.del_top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.del_method {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 13px;
+}
+
+.del_btn {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  min-width: 224px;
+  padding: 9px;
+  padding-bottom: 11px;
+  margin-right: 8px;
+  border: 2px solid rgba(203, 17, 171, 0.15);
+  border-radius: 20px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 16px;
+  transition: 0.2s;
+}
+
+.del_btn:last-child {
+  margin-right: 0;
+}
+
+.del_btn:hover,
+.del_btn:focus {
+  border-color: #cb11ab;
+}
+
+.del_content {
+  display: flex;
+  flex-direction: column;
+  padding-top: 13px;
+}
+
+.del_subtitle {
+  margin-bottom: 8px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 16px;
+}
+
+.del_list {
+  display: flex;
+  flex-direction: column;
+}
+
+.del_item {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.del_label {
+  display: flex;
+  flex-direction: column;
+  padding-left: 24px;
+  align-items: flex-start;
+}
+
+.del_address {
+  padding-right: 8px;
+  font-family: inherit;
+  word-break: break-word;
+}
+
+.del_delete {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+}
+
+.modal_label {
+  position: relative;
+  cursor: pointer;
+}
+
+.modal_label::before {
+  position: absolute;
+  z-index: 3;
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  top: 5px;
+  left: 0;
+  content: "";
+  cursor: pointer;
+}
+
+.modal_input:checked + .modal_label::before {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("./images/icon-dot.svg");
+  background-color: #cb11ab;
+  border: 0;
+}
+
+.bottom {
+  display: flex;
+  padding-top: 16px;
+  margin-top: auto;
+  margin-bottom: 16px;
+}
+
+.bottom_btn {
+  width: 164px;
+  padding: 7px;
+  padding-bottom: 12px;
+  font-family: inherit;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #cb11ab;
+  border-radius: 8px;
 }
 
 /* =========================== */
@@ -2204,6 +2451,31 @@ button {
   .notification_green::after {
     width: 240px;
     right: 0;
+  }
+
+  .overlay {
+    padding-top: 0;
+  }
+
+  .pay,
+  .del {
+    max-width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    min-height: 100vh;
+    border-radius: 0;
+  }
+  .pay_wrapper,
+  .del_wrapper {
+    width: 100%;
+  }
+
+  .del_btn {
+    min-width: 140px;
+  }
+
+  .address_modal {
+    display: flex;
   }
 }
 

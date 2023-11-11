@@ -180,7 +180,8 @@
                                                     </svg>
                                                     <span>В избранное</span>
                                                 </button>
-                                                <button class="btn_action btn_action--delete btn-delete-js" type="button">
+                                                <button class="btn_action btn_action--delete btn-delete-js"
+                                                    type="button">
                                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                                         xmlns="http://www.w3.org/2000/svg">
                                                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -294,7 +295,8 @@
                                                     </svg>
                                                     <span>В избранное</span>
                                                 </button>
-                                                <button class="btn_action btn_action--delete btn-delete-js" type="button">
+                                                <button class="btn_action btn_action--delete btn-delete-js"
+                                                    type="button">
                                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                                         xmlns="http://www.w3.org/2000/svg">
                                                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -407,7 +409,8 @@
                                                     </svg>
                                                     <span>В избранное</span>
                                                 </button>
-                                                <button class="btn_action btn_action--delete btn-delete-js" type="button">
+                                                <button class="btn_action btn_action--delete btn-delete-js"
+                                                    type="button">
                                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                                         xmlns="http://www.w3.org/2000/svg">
                                                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -456,7 +459,8 @@
                     <section class="cart cart--off">
                         <h2 class="cart_title visually-hidden">Товары не в наличие</h2>
                         <div class="cart_all-selected cart_all-selected--off">
-                            <h3 class="cart_subtitle cart_subtitle--off">Отсутствуют · <span class="count-off-js">3 </span>товара</h3>
+                            <h3 class="cart_subtitle cart_subtitle--off">Отсутствуют · <span class="count-off-js">3
+                                </span>товара</h3>
                             <div class="cart_accordion accordion">
                                 <button class="accordion_button" type="button">
                                     <svg class="accordion_icon" width="16" height="10" viewBox="0 0 16 10" fill="none"
@@ -514,7 +518,8 @@
                                                     </svg>
                                                     <span>В избранное</span>
                                                 </button>
-                                                <button class="btn_action btn_action--delete btn-delete-js" type="button">
+                                                <button class="btn_action btn_action--delete btn-delete-js"
+                                                    type="button">
                                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                                         xmlns="http://www.w3.org/2000/svg">
                                                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -578,7 +583,8 @@
                                                     </svg>
                                                     <span>В избранное</span>
                                                 </button>
-                                                <button class="btn_action btn_action--delete btn-delete-js" type="button">
+                                                <button class="btn_action btn_action--delete btn-delete-js"
+                                                    type="button">
                                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                                         xmlns="http://www.w3.org/2000/svg">
                                                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -641,7 +647,8 @@
                                                     </svg>
                                                     <span>В избранное</span>
                                                 </button>
-                                                <button class="btn_action btn_action--delete btn-delete-js" type="button">
+                                                <button class="btn_action btn_action--delete btn-delete-js"
+                                                    type="button">
                                                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
                                                         xmlns="http://www.w3.org/2000/svg">
                                                         <path fill-rule="evenodd" clip-rule="evenodd"
@@ -759,7 +766,7 @@
                             </div>
                             <div class="payment_content">
                                 <div class="payment_card card">
-                                    <span class="card_icon"></span>
+                                    <span class="card_icon card_icon--mir"></span>
                                     <span class="card_number">1234 56•• •••• 1234</span>
                                     <span class="card_date">01/30</span>
                                 </div>
@@ -877,7 +884,7 @@
                                     </button>
                                 </div>
                                 <div class="order_payment-card card">
-                                    <span class="card_icon card_icon--small"></span>
+                                    <span class="card_icon card_icon--mir card_icon--small"></span>
                                     <span class="card_number text">1234 12•• •••• 1234</span>
                                     <span class="card_date  visually-hidden">01/30</span>
                                 </div>
@@ -1001,6 +1008,185 @@
             </div>
         </div>
     </footer>
+
+    <template id="modal-pay">
+        <div class="overlay">
+            <div class="pay">
+                <div class="pay_wrapper">
+                    <div class="pay_top">
+                        <h2 class="pay_title title">Способ оплаты</h2>
+                        <button class="close" type="button" aria-label="Закрыть модальное окно">
+                            <svg width="16" height="15" viewBox="0 0 16 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M0.929612 13.1568C0.539088 13.5473 0.539088 14.1805 0.929612 14.571C1.32014 14.9615 1.9533 14.9615 2.34383 14.571L8.00085 8.91399L13.658 14.5711C14.0485 14.9616 14.6817 14.9616 15.0722 14.5711C15.4627 14.1806 15.4627 13.5474 15.0722 13.1569L9.41506 7.49978L15.0717 1.84309C15.4623 1.45257 15.4623 0.819403 15.0717 0.428879C14.6812 0.0383549 14.0481 0.0383553 13.6575 0.428879L8.00085 6.08557L2.34427 0.428985C1.95374 0.0384611 1.32058 0.0384608 0.930055 0.428985C0.53953 0.819509 0.539531 1.45267 0.930055 1.8432L6.58663 7.49978L0.929612 13.1568Z"
+                                    fill="#9797AF" />
+                            </svg>
+                        </button>
+                    </div>
+                    <ul class="pay_list">
+                        <li class="pay_item">
+                            <input class="pay_input modal_input visually-hidden" type="radio" name="paycard" id="mir">
+                            <label class="pay_label modal_label" for="mir">
+                                <span class="pay_content card">
+
+                                    <span class="card_icon card_icon--mir"></span>
+                                    <span class="card_number">1234 56•• •••• 1234</span>
+                                    <span class="card_date">01/30</span>
+                                </span>
+                            </label>
+                        </li>
+                        <li class="pay_item">
+                            <input class="pay_input modal_input visually-hidden" type="radio" name="paycard" id="visa">
+                            <label class="pay_label modal_label" for="visa">
+                                <span class="pay_content card">
+                                    <span class="card_icon card_icon--visa"></span>
+                                    <span class="card_number">1234 56•• •••• 1234</span>
+                                    <span class="card_date">01/30</span>
+                                </span>
+                            </label>
+                        </li>
+                        <li class="pay_item">
+                            <input class="pay_input modal_input visually-hidden" type="radio" name="paycard"
+                                id="mastercard">
+                            <label class="pay_label modal_label" for="mastercard">
+                                <span class="pay_content card">
+                                    <span class="card_icon card_icon--mastercard"></span>
+                                    <span class="card_number">1234 56•• •••• 1234</span>
+                                    <span class="card_date">01/30</span>
+                                </span>
+                            </label>
+                        </li>
+                        <li class="pay_item">
+                            <input class="pay_input modal_input visually-hidden" type="radio" name="paycard"
+                                id="maestro">
+                            <label class="pay_label modal_label" for="maestro">
+                                <span class="pay_content card">
+                                    <span class="card_icon card_icon--maestro"></span>
+                                    <span class="card_number">1234 56•• •••• 1234</span>
+                                    <span class="card_date">01/30</span>
+                                </span>
+                            </label>
+                        </li>
+                    </ul>
+                    <div class="pay_bottom bottom">
+                        <button class="bottom_btn" type="button">Выбрать</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <template id="modal-delivery">
+        <div class="overlay">
+            <div class="del">
+                <div class="del_wrapper">
+                    <div class="del_top">
+                        <h2 class="del_title title">Способ доставки</h2>
+                        <button class="close" type="button" aria-label="Закрыть модальное окно">
+                            <svg width="16" height="15" viewBox="0 0 16 15" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M0.929612 13.1568C0.539088 13.5473 0.539088 14.1805 0.929612 14.571C1.32014 14.9615 1.9533 14.9615 2.34383 14.571L8.00085 8.91399L13.658 14.5711C14.0485 14.9616 14.6817 14.9616 15.0722 14.5711C15.4627 14.1806 15.4627 13.5474 15.0722 13.1569L9.41506 7.49978L15.0717 1.84309C15.4623 1.45257 15.4623 0.819403 15.0717 0.428879C14.6812 0.0383549 14.0481 0.0383553 13.6575 0.428879L8.00085 6.08557L2.34427 0.428985C1.95374 0.0384611 1.32058 0.0384608 0.930055 0.428985C0.53953 0.819509 0.539531 1.45267 0.930055 1.8432L6.58663 7.49978L0.929612 13.1568Z"
+                                    fill="#9797AF" />
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="del_method">
+                        <button class="del_btn" type="button">В пункт выдачи</button>
+                        <button class="del_btn" type="button">Курьером</button>
+                    </div>
+                    <div class="del_content">
+                        <h3 class="del_subtitle">Мои адреса</h3>
+                        <ul class="del_list">
+                            <li class="del_item">
+                                <input class="del_input modal_input visually-hidden" type="radio" name="address"
+                                    id="first">
+                                <label class="del_label modal_label" for="first">
+                                    <span class="del_address">Бишкек, улица Табышалиева, 57</span>
+                                    <span class="address_info address_modal">
+                                        <span class="address_rating"></span>
+                                        <span class="address_row">Пункт выдачи </span>
+                                    </span>
+                                </label>
+                                <button class="del_delete btn_action--delete" type="button">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M0.5 3C0.5 2.72386 0.723858 2.5 1 2.5H15C15.2761 2.5 15.5 2.72386 15.5 3C15.5 3.27614 15.2761 3.5 15 3.5H1C0.723858 3.5 0.5 3.27614 0.5 3Z"
+                                            fill="black" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M1.4584 2.5H14.5059L13.6411 13.6926C13.5405 14.9947 12.4546 16 11.1486 16H4.84639C3.54299 16 2.45829 14.9986 2.35435 13.6994L1.4584 2.5ZM2.5416 3.5L3.35117 13.6196C3.41353 14.3992 4.06435 15 4.84639 15H11.1486C11.9322 15 12.5837 14.3968 12.6441 13.6155L13.4256 3.5H2.5416Z"
+                                            fill="black" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M11 3.5H5V1.46875C5 0.657582 5.65758 0 6.46875 0H9.53125C10.3424 0 11 0.657582 11 1.46875V3.5ZM6.46875 1C6.20987 1 6 1.20987 6 1.46875V2.5H10V1.46875C10 1.20987 9.79013 1 9.53125 1H6.46875Z"
+                                            fill="black" />
+                                    </svg>
+                                </button>
+                            </li>
+                            <li class="del_item">
+                                <input class="del_input modal_input visually-hidden" type="radio" name="address"
+                                    id="second">
+                                <label class="del_label modal_label" for="second">
+                                    <span class="del_address">Бишкек, улица Жукеева-Пудовкина, 77/1</span>
+                                    <span class="address_info address_modal">
+                                        <span class="address_rating">4.99</span>
+                                        <span class="address_row">Пункт выдачи </span>
+                                    </span>
+                                </label>
+                                <button class="del_delete btn_action--delete" type="button">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M0.5 3C0.5 2.72386 0.723858 2.5 1 2.5H15C15.2761 2.5 15.5 2.72386 15.5 3C15.5 3.27614 15.2761 3.5 15 3.5H1C0.723858 3.5 0.5 3.27614 0.5 3Z"
+                                            fill="black" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M1.4584 2.5H14.5059L13.6411 13.6926C13.5405 14.9947 12.4546 16 11.1486 16H4.84639C3.54299 16 2.45829 14.9986 2.35435 13.6994L1.4584 2.5ZM2.5416 3.5L3.35117 13.6196C3.41353 14.3992 4.06435 15 4.84639 15H11.1486C11.9322 15 12.5837 14.3968 12.6441 13.6155L13.4256 3.5H2.5416Z"
+                                            fill="black" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M11 3.5H5V1.46875C5 0.657582 5.65758 0 6.46875 0H9.53125C10.3424 0 11 0.657582 11 1.46875V3.5ZM6.46875 1C6.20987 1 6 1.20987 6 1.46875V2.5H10V1.46875C10 1.20987 9.79013 1 9.53125 1H6.46875Z"
+                                            fill="black" />
+                                    </svg>
+                                </button>
+                            </li>
+                            <li class="del_item">
+                                <input class="del_input modal_input visually-hidden" type="radio" name="address"
+                                    id="third">
+                                <label class="del_label modal_label" for="third">
+                                    <span class="del_address">Бишкек, микрорайон Джал, улица Ахунбаева Исы, 67/1</span>
+                                    <span class="address_info address_modal">
+                                        <span class="address_rating">4.99</span>
+                                        <span class="address_row">Пункт выдачи </span>
+                                    </span>
+                                </label>
+                                <button class="del_delete btn_action--delete" type="button">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M0.5 3C0.5 2.72386 0.723858 2.5 1 2.5H15C15.2761 2.5 15.5 2.72386 15.5 3C15.5 3.27614 15.2761 3.5 15 3.5H1C0.723858 3.5 0.5 3.27614 0.5 3Z"
+                                            fill="black" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M1.4584 2.5H14.5059L13.6411 13.6926C13.5405 14.9947 12.4546 16 11.1486 16H4.84639C3.54299 16 2.45829 14.9986 2.35435 13.6994L1.4584 2.5ZM2.5416 3.5L3.35117 13.6196C3.41353 14.3992 4.06435 15 4.84639 15H11.1486C11.9322 15 12.5837 14.3968 12.6441 13.6155L13.4256 3.5H2.5416Z"
+                                            fill="black" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M11 3.5H5V1.46875C5 0.657582 5.65758 0 6.46875 0H9.53125C10.3424 0 11 0.657582 11 1.46875V3.5ZM6.46875 1C6.20987 1 6 1.20987 6 1.46875V2.5H10V1.46875C10 1.20987 9.79013 1 9.53125 1H6.46875Z"
+                                            fill="black" />
+                                    </svg>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="del_bottom bottom">
+                        <button class="bottom_btn" type="button">Выбрать</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+
+
+
     <script src="js/main.js" type="module"></script>
 </body>
 
