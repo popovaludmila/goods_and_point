@@ -1,4 +1,5 @@
 import { toggleAccordeon } from "./accordeon.js";
+import { showDeliveryModal, showPayModal } from "./modal.js";
 import { getPluralWord, setNormalPrice, setPriceWithoutSpaces, setRandomId } from "./utils.js";
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -18,14 +19,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const totalPriceWithoutDiscountElement = orderElement.querySelector('.order-price-js'); // общая стоимость товаров без скидки
     const totalDiscountElement = orderElement.querySelector('.total-discount-js'); // общая скидка
     const headerCountElement = document.querySelector('.header-count-js'); // количество товаров в корзине в шапке
+    const footerCountElement = document.querySelector('.footer-count-js'); // количество товаров в корзине в футере
     const countOffElement = document.querySelector('.count-off-js'); // количество отсутствующих товаров
     const cartOffTitleElement = document.querySelector('.cart_subtitle--off'); // текст "Отсутствуют _ товаров"
     const orderBtn = orderElement.querySelector('.order_button'); // кнопка для заказа
     const orderChexbox = orderElement.querySelector('#payment-immediately'); // чекбокс "списать оплату сразу"
+    const changeBtnDeliveryElement = document.querySelectorAll('.delivery-btn-js'); // кнопки изменения доставки
+    const changeBtnPaymentElement = document.querySelectorAll('.payment-btn-js'); // кнопки изменения оплаты
 
-    [...cartItemElement].forEach(item => {
-        return item.setAttribute('data-id', setRandomId());
-    });
 
     const update = () => {
         let totalPrice = 0; // общая стоимость выбранных товаров со скидкой
@@ -63,6 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
         totalPriceWithoutDiscountElement.textContent = `${setNormalPrice(totalPriceWithoutDiscount)} сом`;
         totalDiscountElement.textContent = `−${setNormalPrice(totalDiscount)} сом`;
         headerCountElement.textContent = setNormalPrice(count);
+        footerCountElement.textContent = setNormalPrice(count);
 
         if (orderChexbox.checked) {
             orderBtn.textContent = `Оплатить ${totalPriceElement.textContent}`;
@@ -71,6 +73,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
     update();
 
+    // Изменить способ доставки
+    const changeDelivery = () => {
+        changeBtnDeliveryElement.forEach(btn => {
+
+            btn.addEventListener('click', showDeliveryModal)
+        })
+    };
+
+    changeDelivery();
+
+    // Изменить способ оплаты
+    const changePayment = () => {
+        changeBtnPaymentElement.forEach(btn => {
+
+            btn.addEventListener('click', showPayModal)
+        })
+    };
+
+    changePayment();
 
     // Функция выбора товара в корзине
     const selectGood = () => {
@@ -84,7 +105,6 @@ document.addEventListener('DOMContentLoaded', () => {
                         allSelectedElement.checked = false;
                     }
                 }
-
                 update();
             }
         });

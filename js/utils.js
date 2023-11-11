@@ -23,5 +23,6 @@ const getPluralWord = (number, one, two, multiple) => {
     }
 };
 
+const isEscapeKey = (evt) => evt.key === 'Escape';
 
-export { setRandomId, setPriceWithoutSpaces, setNormalPrice, getPluralWord };
+export { setRandomId, setPriceWithoutSpaces, setNormalPrice, getPluralWord, isEscapeKey };
