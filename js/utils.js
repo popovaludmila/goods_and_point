@@ -21,8 +21,7 @@ const getPluralWord = (number, one, two, multiple) => {
         default:
             return multiple;
     }
-}
-
+};
 
 
 export { setRandomId, setPriceWithoutSpaces, setNormalPrice, getPluralWord };

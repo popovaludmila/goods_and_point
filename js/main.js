@@ -5,95 +5,159 @@ document.addEventListener('DOMContentLoaded', () => {
     toggleAccordeon();
 
     const cartListElement = document.querySelector('.cart_list--on'); // список товаров в наличие
-    const cartItemElement = cartListElement.querySelectorAll('.cart_item'); // товары
-    const totalPriceElement = document.querySelector('.total-price-js');
-    const totalCountElement = document.querySelector('.total-count-js');
-    const accordeonCountElement = document.querySelector('.accordeon-count-js');
-    const accordeonPriceElement = document.querySelector('.accordeon-price-js');
-    const allSelectedElement = document.getElementById('all');
-    const checkboxesElement = cartListElement.querySelectorAll('.checkbox-js');
-
+    const cartListOffElement = document.querySelector('.cart_list--off'); // список отсутствующих товаров
+    const orderElement = document.querySelector('.order'); // блок "Итого"
+    const cartItemElement = cartListElement.querySelectorAll('.cart_item'); // товары в корзине
+    const cartItemOffElement = cartListOffElement.querySelectorAll('.cart_item'); // отсутствующие товары
+    const totalPriceElement = orderElement.querySelector('.total-price-js'); //общая стоимость со скидкой выбранных товаров
+    const totalCountElement = orderElement.querySelector('.total-count-js'); // общее количество
+    const accordeonCountElement = document.querySelector('.accordeon-count-js'); //общее количество в шапке
+    const accordeonPriceElement = document.querySelector('.accordeon-price-js'); // общая стоимость в шапке
+    const allSelectedElement = document.getElementById('all'); // чекбокс "выбрать все"
+    const checkboxesElement = cartListElement.querySelectorAll('.checkbox-js'); // чекбоксы у карточек товаров
+    const totalPriceWithoutDiscountElement = orderElement.querySelector('.order-price-js'); // общая стоимость товаров без скидки
+    const totalDiscountElement = orderElement.querySelector('.total-discount-js'); // общая скидка
+    const headerCountElement = document.querySelector('.header-count-js'); // количество товаров в корзине в шапке
+    const countOffElement = document.querySelector('.count-off-js'); // количество отсутствующих товаров
+    const cartOffTitleElement = document.querySelector('.cart_subtitle--off'); // текст "Отсутствуют _ товаров"
+    
+    
     [...cartItemElement].forEach(item => {
         return item.setAttribute('data-id', setRandomId());
     });
 
     const update = () => {
-        let totalPrice = 0;
-        let totalCount = 0;
-        let price = 0;
-        let count = 0;
+        let totalPrice = 0; // общая стоимость выбранных товаров со скидкой
+        let totalCount = 0; // общее количество выбранных товаров
+        let totalDiscount = 0; // общая скидка выбранных товаров
+        let totalPriceWithoutDiscount = 0; // общая стоимость выбранных товаров без скидки
+
+        let price = 0; // общая стоимость в шапке
+        let count = 0; // общее количество в шапке
+
 
         [...cartItemElement].forEach(cartItem => {
             const cartItemChecked = cartItem.querySelector('.checkbox-js').checked;
             const cartItemPrice = Number(setPriceWithoutSpaces(cartItem.querySelector('.item-price-js').textContent));
             const cartItemCount = Number(cartItem.querySelector('.counter_input').value);
+            const cartPriceWithoutDiscount = Number(setPriceWithoutSpaces(cartItem.querySelector('.item-total-price-js').textContent));
 
             if (cartItemChecked) {
                 totalPrice += cartItemPrice;
                 totalCount += cartItemCount;
+                totalPriceWithoutDiscount += cartPriceWithoutDiscount;
             }
 
             count += cartItemCount;
             price += cartItemPrice;
         });
 
+        totalDiscount = totalPriceWithoutDiscount - totalPrice;
+
         totalCountElement.textContent = `${setNormalPrice(totalCount)} ${getPluralWord(totalCount, 'товар', 'товара', 'товаров')}`;;
         totalPriceElement.textContent = `${setNormalPrice(totalPrice)} сом`;
         accordeonCountElement.textContent = `${setNormalPrice(count)} ${getPluralWord(price, 'товар', 'товара', 'товаров')}`;
-        accordeonPriceElement.textContent = `${setNormalPrice(price)} сом`
+        accordeonPriceElement.textContent = `${setNormalPrice(price)} сом`;
+        totalPriceWithoutDiscountElement.textContent = `${setNormalPrice(totalPriceWithoutDiscount)} сом`;
+        totalDiscountElement.textContent = `-${setNormalPrice(totalDiscount)} сом`;
+        headerCountElement.textContent = setNormalPrice(count);
     }
 
     update();
 
+
+    // Функция выбора товара в корзине
     const selectGood = () => {
+
         [...cartItemElement].forEach(good => {
             const chexboxElement = good.querySelector('.checkbox-js');
 
             chexboxElement.onclick = () => {
-
-                if (chexboxElement.checked) {
-                    chexboxElement.removeAttribute('checked');
-                    update();
-                    return;
-                } else {
-                    chexboxElement.setAttribute('checked', '');
-                    update();
-                    return;
+                if (!chexboxElement.checked) {
+                    if (allSelectedElement.checked) {
+                        allSelectedElement.checked = false;
+                    }
                 }
+
+                update();
             }
         });
     };
 
     selectGood();
 
+    // Выбрать все 
     const selectAllGoods = () => {
         allSelectedElement.onclick = () => {
-            allSelectedElement.setAttribute('checked', '');
-            if (!allSelectedElement.checked) {
+            allSelectedElement.toggleAttribute('checked', '');
+
+            if (allSelectedElement.checked) {
                 checkboxesElement.forEach(item => {
-                    item.setAttribute('checked', '');
+                    if (!item.checked) {
+                        item.checked = true
+                    }
                 });
-              
-                update();
-                return;
             } else {
                 checkboxesElement.forEach(item => {
-                    item.removeAttribute('checked');
+                    if (item.checked) {
+                        item.checked = false;
+                    }
                 });
-                update();
-                return;
             }
-
+            update();
         }
     }
 
     selectAllGoods();
 
+
+    // Функция удаления товаров в корзине
+    const removeGood = () => {
+        [...cartItemElement].forEach(good => {
+
+            const removeBtn = good.querySelector('.btn-delete-js');
+            const chexboxElement = good.querySelector('.checkbox-js');
+
+            removeBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+
+                good.remove();
+                chexboxElement.checked = false;
+                update();
+            })
+        });
+    }
+
+    removeGood();
+
+    // Функция удаления отсутсвующих товаров в корзине
+
+    const removeGoodOff = () => {
+        let count = Number(setPriceWithoutSpaces(countOffElement.textContent));
+        console.log(count);
+        [...cartItemOffElement].forEach(good => {
+
+
+            const removeBtn = good.querySelector('.btn-delete-js');
+
+            removeBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+
+                good.remove();
+                count--;
+                cartOffTitleElement.textContent = `${getPluralWord(count, 'Отсутствует', 'Отсутствуют', 'Отсутствуют')} ${setNormalPrice(count)} ${getPluralWord(count, 'товар', 'товара', 'товаров')}`;
+            })
+
+        });
+    };
+
+    removeGoodOff();
+
     const changeCount = () => {
         [...cartItemElement].forEach(good => {
 
             const goodPriceElement = good.querySelector('.item-price-js'); // стоимость товара со скидками
-            const oneGoodPrice = good.querySelector('.counter_input').dataset.price; // цена одного товара
+            const oneGoodPriceElement = good.querySelector('.counter_input').dataset.price; // цена одного товара
             const inputCountElement = good.querySelector('.counter_input'); // инпут
             const countBalanceElement = good.querySelector('.balance_count'); // количество доступных товаров
             const minusBtnElement = good.querySelector('.btn-minus-js'); // кнопка -
@@ -104,7 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Рассчет стоимости товара без скидки
             const calculatePriceWithoutDiscount = (value) => {
-                return `${setNormalPrice(parseInt(Number(value) * Number(oneGoodPrice)))} сом`
+                return `${setNormalPrice(parseInt(Number(value) * Number(oneGoodPriceElement)))} сом`
             };
 
 
