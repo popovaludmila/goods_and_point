@@ -20,8 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const headerCountElement = document.querySelector('.header-count-js'); // количество товаров в корзине в шапке
     const countOffElement = document.querySelector('.count-off-js'); // количество отсутствующих товаров
     const cartOffTitleElement = document.querySelector('.cart_subtitle--off'); // текст "Отсутствуют _ товаров"
-    
-    
+    const orderBtn = orderElement.querySelector('.order_button'); // кнопка для заказа
+    const orderChexbox = orderElement.querySelector('#payment-immediately'); // чекбокс "списать оплату сразу"
+
     [...cartItemElement].forEach(item => {
         return item.setAttribute('data-id', setRandomId());
     });
@@ -42,6 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const cartItemCount = Number(cartItem.querySelector('.counter_input').value);
             const cartPriceWithoutDiscount = Number(setPriceWithoutSpaces(cartItem.querySelector('.item-total-price-js').textContent));
 
+
             if (cartItemChecked) {
                 totalPrice += cartItemPrice;
                 totalCount += cartItemCount;
@@ -59,8 +61,12 @@ document.addEventListener('DOMContentLoaded', () => {
         accordeonCountElement.textContent = `${setNormalPrice(count)} ${getPluralWord(price, 'товар', 'товара', 'товаров')}`;
         accordeonPriceElement.textContent = `${setNormalPrice(price)} сом`;
         totalPriceWithoutDiscountElement.textContent = `${setNormalPrice(totalPriceWithoutDiscount)} сом`;
-        totalDiscountElement.textContent = `-${setNormalPrice(totalDiscount)} сом`;
+        totalDiscountElement.textContent = `−${setNormalPrice(totalDiscount)} сом`;
         headerCountElement.textContent = setNormalPrice(count);
+
+        if (orderChexbox.checked) {
+            orderBtn.textContent = `Оплатить ${totalPriceElement.textContent}`;
+        }
     }
 
     update();
@@ -131,12 +137,10 @@ document.addEventListener('DOMContentLoaded', () => {
     removeGood();
 
     // Функция удаления отсутсвующих товаров в корзине
-
     const removeGoodOff = () => {
         let count = Number(setPriceWithoutSpaces(countOffElement.textContent));
-        console.log(count);
-        [...cartItemOffElement].forEach(good => {
 
+        [...cartItemOffElement].forEach(good => {
 
             const removeBtn = good.querySelector('.btn-delete-js');
 
@@ -147,12 +151,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 count--;
                 cartOffTitleElement.textContent = `${getPluralWord(count, 'Отсутствует', 'Отсутствуют', 'Отсутствуют')} ${setNormalPrice(count)} ${getPluralWord(count, 'товар', 'товара', 'товаров')}`;
             })
-
         });
     };
 
     removeGoodOff();
 
+    // Функция измениния количества товаров в корзине
     const changeCount = () => {
         [...cartItemElement].forEach(good => {
 
@@ -263,5 +267,20 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
     changeCount();
+
+    // Функция выбора оплаты сразу
+
+    const selectOrderPayment = () => {
+        orderChexbox.onclick = () => {
+            if (orderChexbox.checked) {
+                update();
+                orderBtn.textContent = `Оплатить ${totalPriceElement.textContent}`;
+            } else {
+                orderBtn.textContent = `Заказать`;
+            }
+        };
+    }
+
+    selectOrderPayment();
 
 });
