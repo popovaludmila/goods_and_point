@@ -11,14 +11,6 @@ const emailLabel = form.querySelector('.form_label--email');
 const phoneLabel = form.querySelector('.form_label--phone');
 const innLabel = form.querySelector('.form_label--inn');
 
-const namePrompt = form.querySelector('.prompt-name');
-const surname = form.querySelector('.prompt-surname');
-const emailPrompt = form.querySelector('.prompt-email');
-const phonePrompt = form.querySelector('.prompt-phone');
-const innPrompt = form.querySelector('.prompt-inn');
-
-
-
 const validateForm = () => {
 
     form.addEventListener('submit', (evt) => {

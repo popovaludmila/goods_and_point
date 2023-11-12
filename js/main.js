@@ -4,8 +4,6 @@ import { getPluralWord, setNormalPrice, setPriceWithoutSpaces, setRandomId } fro
 import { validateForm } from "./validation.js";
 
 document.addEventListener('DOMContentLoaded', () => {
-    toggleAccordeon();
-
     const cartListElement = document.querySelector('.cart_list--on'); // список товаров в наличие
     const cartListOffElement = document.querySelector('.cart_list--off'); // список отсутствующих товаров
     const orderElement = document.querySelector('.order'); // блок "Итого"
@@ -27,7 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const orderChexbox = orderElement.querySelector('#payment-immediately'); // чекбокс "списать оплату сразу"
     const changeBtnDeliveryElement = document.querySelectorAll('.delivery-btn-js'); // кнопки изменения доставки
     const changeBtnPaymentElement = document.querySelectorAll('.payment-btn-js'); // кнопки изменения оплаты
-
 
     const update = () => {
         let totalPrice = 0; // общая стоимость выбранных товаров со скидкой
@@ -71,8 +68,9 @@ document.addEventListener('DOMContentLoaded', () => {
             orderBtn.textContent = `Оплатить ${totalPriceElement.textContent}`;
         }
     }
-
     update();
+
+    toggleAccordeon();
 
     // Изменить способ доставки
     const changeDelivery = () => {
@@ -81,7 +79,6 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.addEventListener('click', showDeliveryModal)
         })
     };
-
     changeDelivery();
 
     // Изменить способ оплаты
@@ -91,7 +88,6 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.addEventListener('click', showPayModal)
         })
     };
-
     changePayment();
 
     // Функция выбора товара в корзине
@@ -110,7 +106,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     };
-
     selectGood();
 
     // Выбрать все 
@@ -134,7 +129,6 @@ document.addEventListener('DOMContentLoaded', () => {
             update();
         }
     }
-
     selectAllGoods();
 
 
@@ -154,7 +148,6 @@ document.addEventListener('DOMContentLoaded', () => {
             })
         });
     }
-
     removeGood();
 
     // Функция удаления отсутсвующих товаров в корзине
@@ -174,7 +167,6 @@ document.addEventListener('DOMContentLoaded', () => {
             })
         });
     };
-
     removeGoodOff();
 
     // Функция измениния количества товаров в корзине
@@ -300,7 +292,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         };
     };
-
     selectOrderPayment();
 
     validateForm();

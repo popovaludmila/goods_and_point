@@ -20,11 +20,9 @@
                         <span class="main-nav_toggle-item">Открыть каталог</span>
                     </button>
                 </nav>
-                <a class="header_logo" href="#">
-                    Товары и точка
-                </a>
+                <a class="header_logo" href="#">Товары и точка</a>
                 <div class="search_wrapper">
-                    <form class="search_form" action="">
+                    <form class="search_form" action="#">
                         <input class="search_input" type="text" maxlength="200" name="text" placeholder="Я ищу...">
                         <button class="search_button" type="submit" aria-label="Поиск товара">
                             <span class="search_button-icon">
@@ -161,7 +159,7 @@
                                                         type="button" disabled></button>
                                                 </div>
                                                 <input class="counter_input" type="number" value="1"
-                                                    aria-label="Количество" inputmode="numeric" pattern="[0-9]*"
+                                                    aria-label="Количество" inputmode="numeric"
                                                     data-price="1051" readonly>
                                                 <div class="counter_wrap counter_wrap--plus">
                                                     <button class="counter_btn counter_btn--plus btn-plus-js"
@@ -275,9 +273,7 @@
                                                     <button class="counter_btn counter_btn--minus btn-minus-js disabled"
                                                         type="button"></button>
                                                 </div>
-                                                <input class="counter_input" type="number" value="200" maxlength="3"
-                                                    aria-label="Количество" inputmode="numeric" pattern="[0-9]*"
-                                                    data-price="11500.235" readonly>
+                                                <input class="counter_input" type="number" value="200" aria-label="Количество" inputmode="numeric" data-price="11500.235" readonly>
                                                 <div class="counter_wrap counter_wrap--plus">
                                                     <button class="counter_btn counter_btn--plus btn-plus-js"
                                                         type="button"></button>
@@ -389,9 +385,7 @@
                                                     <button class="counter_btn counter_btn--minus btn-minus-js disabled"
                                                         type="button"></button>
                                                 </div>
-                                                <input class="counter_input" type="number" value="2" maxlength="3"
-                                                    aria-label="Количество" inputmode="numeric" pattern="[0-9]*"
-                                                    data-price="475" readonly>
+                                                <input class="counter_input" type="number" value="2" aria-label="Количество" inputmode="numeric" data-price="475" readonly>
                                                 <div class="counter_wrap counter_wrap--plus">
                                                     <button class="counter_btn counter_btn--plus btn-plus-js disabled"
                                                         type="button"></button>
@@ -527,7 +521,6 @@
                                     </div>
                                 </div>
                             </li>
-
                             <li class="cart_item cart_item--off">
                                 <span class="cart_item-count visually-hidden"></span>
                                 <div class="cart_good good">
@@ -580,7 +573,6 @@
                                     </div>
                                 </div>
                             </li>
-
                             <li class="cart_item cart_item--off">
                                 <span class="cart_item-count">56/54/52/50/48</span>
                                 <div class="cart_good good">
@@ -736,7 +728,7 @@
                         <div class="contacts_wrapper">
                             <h2 class="contacts_title title">Получатель</h2>
                             <div class="contacts_content">
-                                <form class="contacts_form form" action="" id="form" method="post" autocomplete="off">
+                                <form class="contacts_form form" action="#" id="form" method="post" autocomplete="off">
                                     <div class="form_row">
                                         <div class="form_item">
                                             <span class="form_item-notification prompt-name">Имя</span>
@@ -754,15 +746,13 @@
                                             <span class="form_item-notification prompt-email">Почта</span>
                                             <input class="form_input form_input--email" type="text" id="email"
                                                 name="email" placeholder="Почта" autocomplete="off">
-                                            <label class="form_label form_label--email" for="email">Укажите электронную
-                                                почту</label>
+                                            <label class="form_label form_label--email" for="email">Укажите электронную почту</label>
                                         </div>
                                         <div class="form_item">
                                             <span class="form_item-notification prompt-phone">Телефон</span>
                                             <input class="form_input" type="text" id="phone" name="phone"
                                                  placeholder="Телефон">
-                                            <label class="form_label form_label--phone" for="phone">Укажите номер
-                                                телефона</label>
+                                            <label class="form_label form_label--phone" for="phone">Укажите номер телефона</label>
                                         </div>
                                         <div class="form_item">
                                             <span class="form_item-notification prompt-inn">ИНН</span>
@@ -774,7 +764,6 @@
                             </div>
                         </div>
                     </section>
-
                 </div>
                 <aside class="main_rigth">
                     <section class="order">
@@ -782,9 +771,7 @@
                             <div class="order_description">
                                 <div class="order_description-item order_description-item--total">
                                     <span class="order_description-label order_description-label--total">Итого</span>
-                                    <span
-                                        class="order_description-price order_description-price--total total-price-js">2&nbsp;101&nbsp;063
-                                        сом</span>
+                                    <span class="order_description-price order_description-price--total total-price-js">2 101 063 сом</span>
                                 </div>
                                 <div class="order_description-item">
                                     <span class="order_description-label total-count-js">203 товара</span>
@@ -893,7 +880,6 @@
                                 </svg>
                             </a>
                         </li>
-
                         <li class="footer-menu_item">
                             <a class="footer-menu_link" href="#">
                                 <svg class="footer-menu_icon" width="29" height="29" viewBox="0 0 29 29" fill="none"
@@ -917,7 +903,6 @@
 
                             </a>
                         </li>
-
                         <li class="footer-menu_item">
                             <a class="footer-menu_link footer-menu_link--cart" href="#">
                                 <span class="cart_count footer-count-js">3</span>
@@ -939,10 +924,8 @@
                                         d="M1.45442 0.651472C2.1177 0.556717 3.01745 0.5 4 0.5C4.98255 0.5 5.8823 0.556717 6.54558 0.651472C6.87345 0.69831 7.16489 0.757343 7.38495 0.831667C7.4917 0.867722 7.61185 0.917169 7.71511 0.989256C7.80017 1.04864 8 1.21275 8 1.5C8 1.78725 7.80017 1.95136 7.71511 2.01074C7.61185 2.08283 7.4917 2.13228 7.38495 2.16833C7.16489 2.24266 6.87345 2.30169 6.54558 2.34853C5.8823 2.44328 4.98255 2.5 4 2.5C3.01745 2.5 2.1177 2.44328 1.45442 2.34853C1.12655 2.30169 0.835108 2.24266 0.615051 2.16833C0.508302 2.13228 0.388151 2.08283 0.284892 2.01074C0.199835 1.95136 0 1.78725 0 1.5C0 1.21275 0.199835 1.04864 0.284892 0.989256C0.388151 0.917169 0.508302 0.867722 0.615051 0.831667C0.835108 0.757343 1.12655 0.69831 1.45442 0.651472Z"
                                         fill="#CCCCCC" />
                                 </svg>
-
                             </a>
                         </li>
-
                         <li class="footer-menu_item">
                             <a class="footer-menu_link" href="#">
                                 <svg class="footer-menu_icon" width="23" height="20" viewBox="0 0 23 20" fill="none"
@@ -953,7 +936,6 @@
                                 </svg>
                             </a>
                         </li>
-
                         <li class="footer-menu_item">
                             <a class="footer-menu_link" href="#">
                                 <svg class="footer-menu_icon" width="22" height="21" viewBox="0 0 22 21" fill="none"
@@ -1146,9 +1128,6 @@
             </div>
         </div>
     </template>
-
-
-
 
     <script src="js/main.js" type="module"></script>
 </body>
