@@ -290,7 +290,6 @@ document.addEventListener('DOMContentLoaded', () => {
     changeCount();
 
     // Функция выбора оплаты сразу
-
     const selectOrderPayment = () => {
         orderChexbox.onclick = () => {
             if (orderChexbox.checked) {
@@ -300,7 +299,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 orderBtn.textContent = `Заказать`;
             }
         };
-    }
+    };
+
     selectOrderPayment();
 
     validateForm();

@@ -1516,7 +1516,6 @@ button {
 }
 
 .form_input {
-  position: relative;
   padding: 23px 3px;
   padding-bottom: 3px;
   padding-left: 1px;
@@ -1549,6 +1548,7 @@ button {
 
 .error-text {
   color: #f55123;
+  opacity: 1;
 }
 
 

@@ -20,37 +20,62 @@ const innPrompt = form.querySelector('.prompt-inn');
 
 
 const validateForm = () => {
-    nameInput.onfocus = () => namePrompt.classList.add('active');
-
-    console.log(12312);
 
     form.addEventListener('submit', (evt) => {
         evt.preventDefault();
 
-        console.log(222);
+        emptyValidate(nameInput, nameLabel, 'Укажите имя', 'Укажите имя');
+        emptyValidate(surnameInput, surnameLabel, 'Введите фамилию', 'Введите фамилию');
 
-        if (!emailPrompt.checkValidity()) {
-            alert("неверная почта");
-        }
+        emptyValidate(emailInput, emailLabel, 'Укажите электронную почту', 'Проверьте адрес электронной почты');
+        patternValidate(/[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+/, emailInput, emailLabel, 'Укажите электронную почту', 'Проверьте адрес электронной почты');
 
-        if (!inputCheck(nameInput)) {
-            nameInput.classList.add('error');
-            nameLabel.textContent = 'Укажите имя';
-            nameLabel.classList.add('error-text');
-        } else {
-            nameInput.classList.remove('error');
-            nameLabel.textContent = 'Укажите имя'
-        }
+        emptyValidate(phoneInput, phoneLabel, 'Укажите номер телефона', 'Формат: +9 999 999 99 99');
+        patternValidate(/^\+[1-9]{1}\s\d{3}\s\d{3}\s\d{2}\s\d{2}$/, phoneInput, phoneLabel, 'Укажите номер телефона', 'Формат: +9 999 999 99 99');
 
-        form.submit();
+        emptyValidate(innInput, innLabel, 'Укажите ИНН', 'Проверьте ИНН');
+        patternValidate(/^[1-9]{1}[0-9]{13}$/, innInput, innLabel, 'Укажите ИНН', 'Проверьте ИНН');
+
+        // если есть куда отправить
+        // form.submit();
     });
 }
 
-function inputCheck(el) {
-    const inputValue = el.value;
-    const inputPattern = el.getAttribute("pattern");
-    const pattern = new RegExp(inputPattern);
 
-    pattern.test(inputValue);
-};
+function emptyValidate(input, inputLabel, successText, errorText) {
+
+    let value = input.value;
+
+    if (value === '') {
+        input.focus();
+        inputLabel.textContent = errorText;
+        inputLabel.style.opacity = "1";
+        inputLabel.style.color = "#f55123";
+        input.classList.add('error');
+    } else {
+        inputLabel.textContent = successText;
+        inputLabel.style.opacity = "0";
+        inputLabel.style.color = "#000000";
+        input.classList.remove('error');
+    }
+}
+
+function patternValidate(pattern, input, inputLabel, successText, errorText) {
+    let value = input.value;
+    
+    if (!pattern.test(value)) {
+        input.focus();
+        inputLabel.textContent = errorText;
+        inputLabel.style.opacity = "1";
+        inputLabel.style.color = "#f55123";
+        input.classList.add('error');
+    } else {
+        inputLabel.textContent = successText;
+        inputLabel.style.opacity = "0";
+        inputLabel.style.color = "#000000";
+        input.classList.remove('error');
+        console.log(`Вы ввелли корректное значение`);
+    }
+}
+
 export { validateForm };
