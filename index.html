@@ -160,7 +160,7 @@
                                                     <button class="counter_btn counter_btn--minus btn-minus-js disabled"
                                                         type="button" disabled></button>
                                                 </div>
-                                                <input class="counter_input" type="number" value="1" maxlength="3"
+                                                <input class="counter_input" type="number" value="1"
                                                     aria-label="Количество" inputmode="numeric" pattern="[0-9]*"
                                                     data-price="1051" readonly>
                                                 <div class="counter_wrap counter_wrap--plus">
@@ -491,19 +491,6 @@
                                                     class="good_description-item good_description-item--mobile">Размер:
                                                     56</span>
                                             </div>
-                                            <div class="good_store none">
-                                                <div class="good_store-wrap">
-                                                    <span class="good_store-item">Коледино WB</span>
-                                                    <span class="good_store-item good_store-item--i">i</span>
-                                                </div>
-                                                <div class="good_store-wrap">
-                                                    <span class="good_store-item">OOO Вайлдберриз</span>
-                                                    <span class="good_store-item good_store-item--i"
-                                                        data-tooltip="OOO «ВАЙЛДБЕРРИЗ»&#013; 
-                                                    ОГРН: 1067746062449&#013; 
-                                                    142181, Московская область, д Коледино, тер. Индустриальный Парк Коледино, д. 6 стр. 1">i</span>
-                                                </div>
-                                            </div>
                                         </div>
                                     </div>
                                     <div class="good_content good_content--counter good_content--off">
@@ -558,17 +545,6 @@
                                                 <span class="good_description-item">Цвет: прозрачный</span>
                                                 <span class="good_description-item visually-hidden"></span>
                                             </div>
-                                            <div class="good_store visually-hidden">
-                                                <div class="good_store-wrap">
-                                                    <span class="good_store-item">Коледино WB</span>
-                                                    <span
-                                                        class="good_store-item good_store-item--i visually-hidden">i</span>
-                                                </div>
-                                                <div class="good_store-wrap">
-                                                    <span class="good_store-item">OOO Мегапрофстиль</span>
-                                                    <span class="good_store-item good_store-item--i">i</span>
-                                                </div>
-                                            </div>
                                         </div>
                                     </div>
                                     <div class="good_content good_content--counter good_content--off">
@@ -622,17 +598,6 @@
                                                 <span class="good_description-item"></span>
                                                 <span class="good_description-item"></span>
                                             </div>
-                                            <div class="good_store visually-hidden">
-                                                <div class="good_store-wrap">
-                                                    <span class="good_store-item">Коледино WB</span>
-                                                    <span
-                                                        class="good_store-item good_store-item--i visually-hidden">i</span>
-                                                </div>
-                                                <div class="good_store-wrap">
-                                                    <span class="good_store-item">OOO Вайлдберриз</span>
-                                                    <span class="good_store-item good_store-item--i">i</span>
-                                                </div>
-                                            </div>
                                         </div>
                                     </div>
                                     <div class="good_content good_content--counter good_content--off">
@@ -670,7 +635,6 @@
                             </li>
                         </ul>
                     </section>
-
                     <section class="delivery">
                         <div class="delivery_wrapper">
                             <div class="delivery_title-wrap">
@@ -682,7 +646,6 @@
                                     <div class="delivery_item-inner delivery_item-inner--left">
                                         <p class="delivery_item-title item_title">Пункт выдачи</p>
                                     </div>
-
                                     <div class="delivery_item-inner delivery_item-inner--right address">
                                         <span class="address_text">Бишкек, улица Ахматбека Суюмбаева, 12/1</span>
                                         <div class="address_info">
@@ -691,7 +654,6 @@
                                         </div>
                                     </div>
                                 </li>
-
                                 <li class="delivery_item">
                                     <div class="delivery_item-inner">
                                         <p class="delivery_item-title item_title">Стоимость доставки</p>
@@ -700,7 +662,6 @@
                                         <span class="delivery_item-price">Бесплатно</span>
                                     </div>
                                 </li>
-
                                 <li class="delivery_item date">
                                     <ul class="date_list">
                                         <li class="date_item">
@@ -739,14 +700,11 @@
                                                             src="./images/good-two.png" alt="">
                                                         <span class="delivery-date_count">16</span>
                                                     </li>
-
                                                 </ul>
                                             </div>
                                         </li>
                                     </ul>
-
                                 </li>
-
                             </ul>
                             <div class="delivery_notification notification">
                                 <span class="notification_icon"></span>
@@ -757,7 +715,6 @@
                             </div>
                         </div>
                     </section>
-
                     <section class="payment">
                         <div class="payment_wrapper">
                             <div class="payment_title-wrap">
@@ -779,33 +736,44 @@
                         <div class="contacts_wrapper">
                             <h2 class="contacts_title title">Получатель</h2>
                             <div class="contacts_content">
-                                <form class="contacts_form form" action="" method="post">
+                                <form class="contacts_form form" action="#" id="form" method="post" autocomplete="off">
                                     <div class="form_row">
                                         <div class="form_item">
-                                            <label class="form_label" for="input_name">Имя</label>
-                                            <input class="form_input" type="text" placeholder="Имя" id="input_name">
+                                            <span class="form_item-notification prompt-name">Имя</span>
+                                            <input class="form_input" type="text" placeholder="Имя" id="name"
+                                                name="name" autocomplete="off"
+                                                required>
+                                            <label class="form_label form_label--name" for="name">Укажите имя</label>
                                         </div>
                                         <div class="form_item">
-                                            <label class="form_label" for="input_surname">Фамилия</label>
-                                            <input class="form_input" type="text" id="input_surname"
-                                                placeholder="Фамилия">
+                                            <span class="form_item-notification prompt-surname">Фамилия</span>
+                                            <input class="form_input" type="text" id="surname" placeholder="Фамилия"
+                                                autocomplete="off" required>
+                                            <label class="form_label form_label--surname" for="surname">Введите фамилию</label>
                                         </div>
                                     </div>
                                     <div class="form_row">
                                         <div class="form_item">
-                                            <label class="form_label" for="input_email">Почта</label>
-                                            <input class="form_input form_input--email" type="email" id="input_email"
-                                                imputmode="email" placeholder="Почта">
+                                            <span class="form_item-notification prompt-email">Почта</span>
+                                            <input class="form_input form_input--email" type="email" id="email"
+                                                name="email" imputmode="email" placeholder="Почта"
+                                                pattern="[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+"
+                                                autocomplete="off" required>
+                                                <label class="form_label form_label--email" for="email">Укажите электронную почту</label>
                                         </div>
                                         <div class="form_item">
-                                            <label class="form_label form_label--active" for="input_tel">Телефон</label>
-                                            <input class="form_input" type="tel" id="input_tel" inputmode="numeric"
-                                                placeholder="Телефон">
+                                            <span class="form_item-notification prompt-phone">Телефон</span>
+                                            <input class="form_input" type="tel" id="phone" name="phone"
+                                                inputmode="numeric" placeholder="Телефон"
+                                                pattern="^(\+)\d{1}\s\d{3}\s\d{3}\s\d{2}\s\d{2}" autocomplete="off"
+                                                required>
+                                            <label class="form_label form_label--phone" for="phone">Укажите номер телефона</label>
                                         </div>
                                         <div class="form_item">
-                                            <label class="form_label" for="input_inn">ИНН</label>
-                                            <input class="form_input" type="text" id="input_inn" placeholder="ИНН">
-                                            <span class="form_item-notification">Для таможенного оформления</span>
+                                            <span class="form_item-notification prompt-inn">ИНН</span>
+                                            <input class="form_input" type="text" id="inn" name="inn" placeholder="ИНН"
+                                                maxlength="14" pattern="[0-9]{14}" autocomplete="off" required>
+                                            <label class="form_label form_label--inn" for="inn">Укажите ИНН</label>
                                         </div>
                                     </div>
                                 </form>
@@ -898,7 +866,7 @@
                                     <span class="order_payment-text text">Спишем оплату с карты при получении</span>
                                 </div>
                                 <div class="order_button-wrap">
-                                    <button class="order_button" type="button">Заказать</button>
+                                    <button class="order_button" type="submit" form="form">Заказать</button>
                                 </div>
                             </div>
                             <p class="order_access text">Соглашаюсь <a class="order_access-link" href=""> с правилами
@@ -1026,7 +994,8 @@
                     </div>
                     <ul class="pay_list">
                         <li class="pay_item">
-                            <input class="pay_input modal_input visually-hidden" type="radio" name="paycard" id="mir" checked>
+                            <input class="pay_input modal_input visually-hidden" type="radio" name="paycard" id="mir"
+                                checked>
                             <label class="pay_label modal_label" for="mir">
                                 <span class="pay_content card">
 

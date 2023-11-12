@@ -1,6 +1,7 @@
 import { toggleAccordeon } from "./accordeon.js";
 import { showDeliveryModal, showPayModal } from "./modal.js";
 import { getPluralWord, setNormalPrice, setPriceWithoutSpaces, setRandomId } from "./utils.js";
+import { validateForm } from "./validation.js";
 
 document.addEventListener('DOMContentLoaded', () => {
     toggleAccordeon();
@@ -38,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let count = 0; // общее количество в шапке
 
 
-        [...cartItemElement].forEach(cartItem => {
+        [...cartListElement.querySelectorAll('.cart_item')].forEach(cartItem => {
             const cartItemChecked = cartItem.querySelector('.checkbox-js').checked;
             const cartItemPrice = Number(setPriceWithoutSpaces(cartItem.querySelector('.item-price-js').textContent));
             const cartItemCount = Number(cartItem.querySelector('.counter_input').value);
@@ -63,8 +64,8 @@ document.addEventListener('DOMContentLoaded', () => {
         accordeonPriceElement.textContent = `${setNormalPrice(price)} сом`;
         totalPriceWithoutDiscountElement.textContent = `${setNormalPrice(totalPriceWithoutDiscount)} сом`;
         totalDiscountElement.textContent = `−${setNormalPrice(totalDiscount)} сом`;
-        headerCountElement.textContent = setNormalPrice(count);
-        footerCountElement.textContent = setNormalPrice(count);
+        headerCountElement.textContent = setNormalPrice(totalCount);
+        footerCountElement.textContent = setNormalPrice(totalCount);
 
         if (orderChexbox.checked) {
             orderBtn.textContent = `Оплатить ${totalPriceElement.textContent}`;
@@ -300,7 +301,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         };
     }
-
     selectOrderPayment();
+
+    validateForm();
 
 });
